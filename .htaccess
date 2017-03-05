@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9_-]+)(|/)$ index.php?url=$1
+RewriteRule ^news/([a-zA-Z0-9_-]+)(|/)$ index.php?url=news&id=$1
+RewriteRule ^home/([a-zA-Z0-9_-]+)(|/)$ index.php?url=home&user=$1
+RewriteRule ^swf/habbo-imaging/badge/([a-zA-Z0-9_-]+)(|/)$ swf/habbo-imaging/badge.php?badge=$1
+RewriteRule ^register/([a-zA-Z0-9_-]+)(|/)$ index.php?url=register&userref=$1
+RewriteRule ^newpassword/([a-zA-Z0-9_-]+)(|/)$ index.php?url=newpassword&key=$1

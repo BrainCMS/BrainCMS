@@ -1,0 +1,67 @@
+.friendlist{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	color: #FFF;
+	font-family: Arial;
+	font-size: 15px;
+}
+.friendlist .friend_1{
+	background: #EF233B;
+	margin-bottom: 10px;
+	border-radius: 4px;	
+}
+.friendlist .friend_2{
+	background: #EFA823;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+.friendlist .friend_3{
+	background: #161616;
+	border-radius: 4px;	
+}
+.friendlist .friend_head{
+	height: 55px;
+	width: 55px;
+}
+.friendlist .friend_online{
+	float: right;
+	background: rgba(0,0,0,0.50);
+	color: white;
+	padding: 6px;
+	border-radius: 7px;
+	margin-right: 10px;
+	font-size: 13px;
+}
+.friendlist .circle_friend{
+	background: radial-gradient(rgba(255,255,255,0.5),#FFF);
+	border-radius: 100%;
+	margin: 5px;
+	border: 2px rgba(0,0,0,0.1) solid;
+}
+.numRows_friend{
+	background: rgba(0,0,0,0.5);
+	color: white;
+	padding: 5px 13px;
+	border-radius: 0px 0px 4px 4px;
+}
+.simpleFriends_alert{
+	background: radial-gradient(#F50F0F,#E12727);
+	color: #FFF;
+	padding: 10px;
+	border-radius: 8px;
+	border: 2px rgba(0,0,0,0.3) solid;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.simpleFriends_alert a{
+	text-decoration: underline;
+	color: #CECECE;
+}
+.simpleFriends_alert a:hover{
+	text-decoration: underline;
+	color: #FFF;
+}
+.friendlist .friend_icon{
+	padding: 5px;
+}

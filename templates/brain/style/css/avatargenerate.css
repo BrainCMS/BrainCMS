@@ -1,0 +1,349 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+	padding:0px;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*
+ * Page Styling
+ */
+
+
+
+/*
+ * Container
+ */
+
+.container {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+/*
+ * Viewport
+ */
+
+.builder-viewport {
+    width: 490px;
+    min-height: 442px;
+    box-shadow: 0 5px 0 rgba( 0, 0, 0, .4 );
+    border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    -ms-border-radius: 0 0 8px 8px;
+    -o-border-radius: 0 0 8px 8px;
+}
+
+/*
+ * Navigation
+ */
+
+.main-navigation ul {
+    margin: 50px 0 0 0;
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 40px;
+	padding:0px;
+}
+
+.main-navigation ul {
+    border-bottom: 2px solid rgba( 255, 255, 255, .4 );
+}
+
+.main-navigation ul li {
+    width: 61px;
+    height: 38px;
+    float: left;
+    margin: 0 2.5px 0 0;
+    border-radius: 7px 7px 0 0;
+    -webkit-border-radius: 7px 7px 0 0;
+    -moz-border-radius: 7px 7px 0 0;
+    -ms-border-radius: 7px 7px 0 0;
+    -o-border-radius: 7px 7px 0 0;
+    background: rgba( 0, 0, 0, .2 );
+}
+
+.main-navigation ul li img {
+    display: block;
+    margin: 7px auto;
+}
+
+/*
+ * Sub Navigation
+ */
+
+.sub-navigation {
+    background: #eceae0;
+    padding: 15px 10px 10px 10px;
+}
+
+.sub-navigation li {
+    height: 35px;
+    width: 55px;
+    display: inline-block;
+}
+
+.sub-navigation li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.sub-navigation li a.nav-selected {
+    opacity: 1;
+}
+
+.sub-navigation li a:hover {
+    opacity: 1;
+}
+
+a.male {
+    background: url(../../style/images/avatarreg/male.png) no-repeat center 5px;
+}
+
+a.female {
+    background: url(../../style/images/avatarreg/female.png) no-repeat center center;
+}
+
+a.hair {
+    background: url(../../style/images/avatarreg/hair-sn.png) no-repeat center center;
+}
+
+a.hats {
+    background: url(../../style/images/avatarreg/hats.png) no-repeat center center;
+}
+
+a.hair-accessories {
+    background: url(../../style/images/avatarreg/hair-accessories.png) no-repeat center center;
+}
+
+a.glasses {
+    background: url(../../style/images/avatarreg/glasses.png) no-repeat center center;
+}
+
+a.moustaches {
+    background: url(../../style/images/avatarreg/moustaches.png) no-repeat center center;
+}
+
+a.tops {
+    background: url(../../style/images/avatarreg/top.png) no-repeat center center;
+}
+
+a.chest {
+    background: url(../../style/images/avatarreg/chest.png) no-repeat center center;
+}
+
+a.jackets {
+    background: url(../../style/images/avatarreg/jackets.png) no-repeat center center;
+}
+
+a.accessories {
+    background: url(../../style/images/avatarreg/accessories.png) no-repeat center center;
+}
+
+a.bottoms {
+    background: url(../../style/images/avatarreg/bottoms-sn.png) no-repeat center center;
+}
+
+a.shoes {
+    background: url(../../style/images/avatarreg/shoes.png) no-repeat center center;
+}
+
+a.belts {
+    background: url(../../style/images/avatarreg/belts.png) no-repeat center center;
+}
+
+
+
+/*
+ * Clothes and Colors
+ */
+
+#clothes-colors {
+    width: 75%;
+    height: 400px;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 10px;
+    background: #eceae0;
+    border-radius: 0 0 0 8px;
+    -webkit-border-radius: 0 0 0 8px;
+    -moz-border-radius: 0 0 0 8px;
+    -ms-border-radius: 0 0 0 8px;
+    -o-border-radius: 0 0 0 8px;
+}
+
+#colors,
+#clothes {
+    display: block;
+    margin: 0 0 0 0;
+    overflow-y: auto;
+}
+
+#colors {
+    height: 40%;
+    max-height: 150px;
+    margin: 15px 0;
+}
+
+#clothes {
+    height: 60%;
+    max-height: 250px;
+}
+
+#avatar {
+    float: left;
+    background: #eceae0;
+    width: 25%;
+    height: 400px;
+    border-radius: 0 0 8px 0;
+    -webkit-border-radius: 0 0 8px 0;
+    -moz-border-radius: 0 0 8px 0;
+    -ms-border-radius: 0 0 8px 0;
+    -o-border-radius: 0 0 8px 0;
+    position: relative;
+}
+
+#avatar #myHabbo {
+    margin: 0 auto;
+    display: block;
+}
+
+.color-object {
+    display: inline-block;
+    width: 13px;
+    height: 17px;
+    border: 2px solid #736d67;
+    margin: 2px 1.5px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 0px rgba(0 ,0, 0, 1 );
+}
+
+.clothes-object {
+    display: inline-block;
+    height: 55px;
+    width: 55px;
+    background: #eceae0;
+    background-repeat: no-repeat;
+    background-position: center -10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid rgba( 0, 0, 0, 0 );
+}
+
+.removable {
+    background-image: url(../../style/images/avatarreg/removable.png);
+    background-position: center center !important;
+}
+
+.clothes-object:hover,
+.clothes-object.selected {
+    background-color: rgba( 0, 0, 0, .2 );
+    border: 2px solid rgba( 255, 255, 255, .5 );
+}
+
+.ch {
+    background-position-y: -30px !important;
+}
+
+.lg {
+    background-position-y: -70px !important;
+}
+
+.ca {
+    background-position-y: -30px !important;
+}
+
+.cp {
+    background-position-y: -30px !important;
+}
+
+.cc {
+    background-position-y: -45px !important;
+}
+
+.wa {
+    background-position-y: -50px !important;
+}
+
+.sh {
+    background-position-y: -75px !important;
+}
+
+/*
+ *
+ */
+
+.nav-selected {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+/*
+ * Code
+ *
+ */
+
+#code {
+    width: 100%;
+    height: 40px;
+    background: #f3f3f3;
+}
+
+/*
+ * Miscellaneous
+ *
+ */
+
+
+
+/* Buttons */
+
+
+#avatarSelectionForm {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#avatarSelectionForm button {
+    width: 100px;
+    height: 28px;
+    background: url(../../style/images/avatarreg/button.png) no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    border: 0;
+    outline: none;
+}

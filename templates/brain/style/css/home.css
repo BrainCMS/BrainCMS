@@ -1,0 +1,120 @@
+#column {
+    float: left;
+    width: 468px;
+    padding: 10px;
+	}
+	#column .title.hellgruen {
+    background: rgba(100,200,34,1);
+    color: #FFF;
+	}
+	#column .title {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -3px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+	}
+	.boxbg1 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    height: 90px;
+    margin-top: 40px;
+    border-radius: 14px;
+	}
+	.mission {
+    display: inline-block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 13px;
+    background: url('../../style/images/icons/motto_sprechblase_left.png?') no-repeat , url('../../style/images/icons/motto_sprechblase_right.png') no-repeat, url('../../style/images/icons/motto_sprechblase_mitte.png') repeat-x;
+    background-position: left top, right top, top;
+    margin-top: 20px;
+    margin-left: -20px;
+	}
+	.boxbg3 {
+    float: right;
+    width: 232px;
+    margin-top: 20px;
+	}
+	.boxx.credits {
+    background: url('../../style/images/icons/6.png') no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: 5px 50%;
+	}
+	.boxx {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    border-radius: 4px;
+    height: 10px;
+    line-height: 10px;
+    text-align: right;
+    padding: 10px;
+    font-size: 11px;
+    margin-bottom: 5px;
+	}
+	.boxbg2 {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 200px;
+    margin-top: 20px;
+    height: 120px;
+    border-radius: 15px;
+	}
+	.sternbg {
+    background: url('../../style/images/icons/stern_bg.png');
+    width: 194px;
+    height: 77px;
+    margin-left: -3px;
+    margin-top: 10px;
+    padding: 10px 5px 10px 5px;
+	}
+	.boxx.credits {
+    background: url('../../style/images/icons/6.png') no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: 5px 50%;
+	}
+	.boxx.pixel {
+    background: url('../../style/images/icons/5.png') no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: 5px 50%;
+	}
+	.boxx.sterne {
+    background: url('../../style/images/icons/8.png') no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: 5px 50%;
+	}
+	.boxx.register {
+    background: url('../../style/images/icons/9.png') no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-position: 5px 50%;
+	}
+		a.tooltip {outline:none;    color: white; }
+a.tooltip strong {line-height:30px;     color: white;}
+a.tooltip:hover {text-decoration:none;z-index:400;    color: white;} 
+a.tooltip span {
+    z-index:10;display:none; padding:14px 20px;
+    margin-top:-60px; margin-left:-90px;
+    width:200px; line-height:16px;
+	color: white;
+	z-index:400;
+	}
+a.tooltip:hover span{
+    display:inline; position:absolute; color:#111;    color: white;
+border:1px solid rgba(0, 0, 0, 0.9); background:rgba(0, 0, 0, 0.7);}
+.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+
+/*CSS3 extras*/
+a.tooltip span
+{
+    border-radius:4px;
+	z-index:400;
+	color: white;
+}

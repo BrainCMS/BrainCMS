@@ -1,0 +1,418 @@
+  @import url(//fonts.googleapis.com/css?family=Ubuntu:400,500,300,700);
+            @import url(//fonts.googleapis.com/css?family=Lobster);
+            @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+            body {
+                font-family: Ubuntu;
+                margin: 0px;
+                font-size: 13px;
+                background-color: lightblue;
+                background-size: 100% 100%;
+            }
+
+            body #header {
+                width: 100%;
+                height: 150px;
+                background: #1D628B;
+                border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+                // -webkit-box-shadow: 0 0 0 2px rgba(0,0,0,0.6);
+                // box-shadow: 0 0 0 2px rgba(0,0,0,0.6);
+            }
+
+            body #header #login
+            {
+                width: 860px;
+                height: 100px;
+
+                margin: 0px auto;
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: 0px 0px 0px 4px;
+                border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+                -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+            }
+          
+          body #header #login #usercount {
+            float: right;
+            background: #6091AE;
+            padding-left: 30px;
+            padding-right: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 13px;
+            color: #FFF;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
+            margin-top: 22px;
+            margin-right: -2px;
+            
+          }
+
+            body #header #login table {
+                float: left;
+                margin-top: 10px;
+            }
+
+            body #header #login table td{
+                color: #FFF;
+                font-size: 13px;
+
+            }
+
+            body #header #login #logo{
+                width: 270px;
+                height: 100px;
+                background: url('/system/theme/brain/style/images/index/logo.png') 50% 50% no-repeat;
+                float: left;
+
+            }
+
+            body #header #login table td .input {
+                color: #FFF;
+                height: 40px;
+                padding-left: 10px;
+                border: 2px solid #69A6CE;
+                border-bottom: 3px solid #6091AE;
+                border-radius: 4px;
+                background: rgba(255, 255, 255, 0.2);
+                margin-right: 5px;
+
+            }
+
+            body #header #login table td .submit {
+                width: 150px;
+                height: 40px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                background: #27AE60;
+                color: #FFF;
+                cursor: pointer;
+            }
+
+            body #content {
+                position: absolute;
+                left: 0px;
+                top: 153px;
+                bottom: 70px;
+                right: 0px;
+background: url("https://habboo-a.akamaihd.net/c_images/reception/olympic16_background_left.png"),url("https://habboo-a.akamaihd.net/c_images/reception/meter_level_1_vip_icon_lympix.png"),url("https://habboo-a.akamaihd.net/c_images/reception/default_new_bg_right.png"),url("https://habboo-a.akamaihd.net/c_images/reception/partyboat16_bg_gradient.png");
+    background-position:left bottom, left bottom,right bottom;
+    background-repeat: no-repeat, no-repeat,no-repeat,repeat-x,repeat-x;
+
+            }
+
+            body #content .middle {
+                padding-top: 50px;
+                width: 860px;
+                margin: 0px auto;
+                text-align: center;
+            }	
+
+        
+
+            body #content .middle .diashow .indiashow {
+                width: 1160px;
+                height: 380px;
+            }
+
+            body #content .middle .diashow .dia {
+                float: left;
+                margin-top: 20px;
+                width: 238px;
+                height: 300px;
+                background: #FFF;
+                border-radius: 4px;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                margin-right: 10px;
+            }
+
+
+            body #content .middle .diashow .dia .title {
+                margin-top: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            body #content .middle .diashow .dia.bild1 .image {
+                width: 240px;
+                height: 200px;
+                border-radius: 4px;
+                border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+                background: url(https://puu.sh/mUTev.png) 50% 50%;
+            }
+
+            body #content .middle .diashow .dia.bild1 .image .inner{
+                width: 240px;
+                height: 200px;
+                background: url('https://i.imgur.com/Ni71UFX.png') 50% 50% no-repeat;
+				    background-color: rgba(56, 56, 56, 0.66);
+            }
+
+            body #content .middle .diashow .dia.bild2 .image {
+                width: 240px;
+                height: 200px;
+                border-radius: 4px;
+                border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+                background: url(https://puu.sh/mUTev.png) 50% 50%;
+            }
+
+            body #content .middle .diashow .dia.bild2 .image .inner {
+                width: 240px;
+                height: 200px;
+                background: url('https://hydra-media.cursecdn.com/habbo.gamepedia.com/b/b5/2x2_Stack_Magic_Tile.png?version=323dc9f4728aea9df8693b2db4d11a55') 50% 50% no-repeat;
+				    background-color: rgba(56, 56, 56, 0.66);
+            }
+
+
+            body #content .middle .diashow .dia.bild3 .image {
+                width: 240px;
+                height: 200px;
+                border-radius: 4px;
+                border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+                background: url(https://puu.sh/mUTev.png) 50% 50%;
+				    background-color: rgba(56, 56, 56, 0.66);
+            }
+
+            body #content .middle .diashow .dia.bild3 .image .inner {
+                width: 240px;
+                height: 200px;
+                background: url('https://i.imgur.com/c8vv9zc.png') 50% 50% no-repeat;
+				    background-color: rgba(56, 56, 56, 0.66);
+            }
+
+
+            body #content .middle .diashow .dia.bild4 .image {
+                width: 240px;
+                height: 200px;
+                border-radius: 4px;
+                border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+                background: url(https://puu.sh/mUTev.png) 50% 50%;
+            }
+
+            body #content .middle .diashow .dia.bild4 .image .inner {
+                width: 240px;
+                height: 200px;
+                background: url('/public/images/index/feature/bank.png?rld') 50% 50% no-repeat;
+            }
+
+
+            body #content .middle #box {
+                float: left;
+                background: #FFF;
+
+                margin-top: 10px;
+                padding: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.4);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+                border-radius: 4px;
+                text-align: left;
+                margin-right: 20px;
+            }
+
+            body #content .middle #box .title {
+                font-size: 20px;
+                border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+                height: 50px;
+                line-height: 50px;
+                margin-top: -10px;
+                margin-bottom: 20px;
+            }
+
+            body #content .middle #box .input {
+                width: 100%;
+                height: 40px;
+                padding-left: 40px;
+                border-radius: 4px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            body #content .middle #box .input.bad {
+                background: url('https://habboemotion.com/resources/images/icons/v22_3.gif') 15px 50% no-repeat;
+            }
+
+            body #content .middle #box .input.good {
+                background: url('https://puu.sh/mVuHF.gif') 15px 50% no-repeat;  
+            }
+
+            body #content .middle #box .info {
+                font-size: 12px;
+                color: #CCC;
+                margin-bottom: 20px;
+            }
+
+
+            body #content .middle #box .bottomform
+            {
+                height: 40px;
+                width: 100%;
+                border-top: 1px dotted rgba(0, 0, 0, 0.2);
+            }
+
+            body #content .middle #box .bottomform .submit {
+                float: right;
+                height: 40px;
+                padding-left: 40px;
+                padding-right: 40px;
+                margin-top: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                background: #0aa000;
+                background: -moz-linear-gradient(top, #0aa000 0%, #187c1d 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0aa000), color-stop(100%,#187c1d));
+                background: -webkit-linear-gradient(top, #0aa000 0%,#187c1d 100%);
+                background: -o-linear-gradient(top, #0aa000 0%,#187c1d 100%);
+                background: -ms-linear-gradient(top, #0aa000 0%,#187c1d 100%);
+                background: linear-gradient(to bottom, #0aa000 0%,#187c1d 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0aa000', endColorstr='#187c1d',GradientType=0 );
+                box-shadow: inset 0px 1px 0px rgba(256,256,256,0.3);
+                color: #fff;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                cursor: pointer;
+            }
+
+            body #content .middle #box .bottomform a {
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #000;
+                text-decoration: none;
+                width: 120px;
+                margin-top: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                background: #0aa000;
+                background: -moz-linear-gradient(#e74c3c 50%, #c0392b 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#e74c3c), color-stop(100%,#c0392b));
+                background: -webkit-linear-gradient(#e74c3c 50%, #c0392b 100%);
+                background: -o-linear-gradient(#e74c3c 50%, #c0392b 100%);
+                background: -ms-linear-gradient(#e74c3c 50%, #c0392b 100%);
+                background: linear-gradient(to bottom, #e74c3c 0%,#e74c3c 50%,#c0392b 51%,#c0392b 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e74c3c', endColorstr='#c0392b',GradientType=0 );
+                box-shadow: inset 0px 1px 0px rgba(256,256,256,0.3);
+                color: #fff;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                cursor: pointer;
+            }
+
+            body #content #msg {
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                color: #FFF;
+                background: #c0392b;
+                border-radius: 4px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            }
+
+            body #content .middle .regi {
+                width: calc(100% - 40px);
+                height: 100px;
+                float: left;
+                background: #FFF;
+
+                margin-top: 10px;
+                padding: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.4);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+                border-radius: 4px;
+                text-align: left;
+                margin-bottom: 100px;
+            }
+
+            body #content .middle .regi #box3 {
+                height: 75px;
+                width: 274px;   
+                background: #0aa000; /* Old browsers */
+                background: #3BA800;
+                background: -moz-linear-gradient(#3BA800 50%, #2C7E00 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#3BA800), color-stop(100%,#2C7E00));
+                background: -webkit-linear-gradient(#3BA800 50%, #2C7E00 100%);
+                background: -o-linear-gradient(#3BA800 50%, #2C7E00 100%);
+                background: -ms-linear-gradient(#3BA800 50%, #2C7E00 100%);
+                background: linear-gradient(to bottom, #3BA800 0%,#3BA800 50%,#2C7E00 51%,#2C7E00 100%);
+                border: 3px solid #2C7E00;
+                cursor: pointer;
+                color: white;
+                text-shadow: 0px -1px 0px black;
+                font-family: Ubuntu;
+                font-weight: bold;
+                line-height: 200%;
+                text-align: center;
+                box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
+                border-radius: 5px;
+                float: right;
+                margin-top: 10px;
+            }
+
+            body #content .middle .regi #box3:hover {
+                background: #45CB00;
+                background: -moz-linear-gradient(#45CB00 50%, #339D00 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#45CB00), color-stop(100%,#339D00));
+                background: -webkit-linear-gradient(#45CB00 50%, #339D00 100%);
+                background: -o-linear-gradient(#45CB00 50%, #339D00 100%);
+                background: -ms-linear-gradient(#45CB00 50%, #339D00 100%);
+                background: linear-gradient(to bottom, #45CB00 0%,#45CB00 50%,#339D00 51%,#339D00 100%); 
+                border: 3px solid #339D00;
+            }
+
+            body #content .middle .regi #box3 .register
+            {
+                margin-top: 5;
+                font-size: 20px;
+            }
+
+            body #content .middle .regi #box3 .for_free
+            {
+                margin-top: 10px;
+                font-size: 30px;
+            }
+
+            body #footer {
+                position: fixed;
+                left: 0px;
+                bottom: 0px;
+
+                width: 100%;
+                height: 70px;
+                color: #FFF;
+                border-top: 3px solid rgba(0, 0, 0, 0.2);
+                background: #2980b9;
+            }	
+
+            body #footer .middle {
+                width: 860px;
+                height: 70px;
+
+                margin: 0px auto;
+            }
+
+            body #footer .middle .left {
+                height: 70px;
+                line-height: 70px;
+                // text-shadow: 1px 1px 0 #000;	
+                font-size: 15px;
+            }
+
+            body #footer .middle .right {
+                height: 70px;
+                line-height: 70px;
+                float: right;
+            }
+
+            body #footer .middle .right .logo {
+                font-family: Lobster;
+                color: #FFF;
+                font-size: 34px;
+            }
