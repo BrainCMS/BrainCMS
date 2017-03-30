@@ -37,11 +37,11 @@
 						<div class="col-md-6">
 							
 							
-							Working on this!:<br><b>Hey there, I am currently working on this! -Theo</b> <br><br>
+							
 							If 2 people have an argument:<br><b><?php echo admin::LookSollie("quarrel"); ?></b> <br><br>
 							Trust and Serious:<br><b><?php echo admin::LookSollie("serious"); ?></b> <br><br>
 							What Can you bring to the Hotel:<br><b><?php echo admin::LookSollie("improve"); ?></b> <br><br>
-							Trust and Serious:<br><b><?php echo date('d-m-Y H:i', admin::LookSollie("date")) ?></b> <br><br>
+							Date of apply:<br><b><?php echo date('d-m-Y H:i', admin::LookSollie("date")) ?></b> <br><br>
 							IP of the User:<br><b><?php echo admin::LookSollie("ip"); ?></b> <br><br>
 							<?php
 								if (User::userData('rank') > '8')

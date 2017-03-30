@@ -4,27 +4,27 @@ body, html {
 	margin: 0;
 	bottom: 0;
 	overflow: hidden;
-	}
+}
 
 input:focus {
 	outline: 0;
-	}
+}
 
 #error-container-box {
 	background-color: #c0392b;
 	width: 100%;
 	height: 40px;
 	border-bottom: 3px solid rgba(0,0,0,0.2);
-	}
-	
+}
+
 #error-container-box > .text {
 	font-family: 'Ubuntu';
 	font-size: 14px;
 	color: #FFFFFF;
 	text-align: center;
 	line-height: 40px;
-	}
-	
+}
+
 header {
 	background-image: url(/templates/brain/style/images/login/header-bg-2.png);
 	width: 100%;
@@ -34,32 +34,32 @@ header {
 	-moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
 	box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
     border-bottom: 3px solid grey;
-	}
-	
-	
+}
+
+
 header > #main {
 	width: 990px;
 	margin: 0 auto;
-	}
-	
+}
+
 header > #main > .left {
 	width: 300px;
 	float: left;
-	}
-	
+}
+
 header > #main > .right {
 	width: 600px;
 	float: right;
-	}
-	
+}
+
 header > #main > .left > #banner-counter-container-box {
 	background-color: transparent;
 	width: auto;
 	height: auto;
 	padding-top: 60px;
 	float: left;
-	}
-	
+}
+
 header > #main > .left > #banner-counter-container-box > .text {
 	background-color: rgba(0,0,0,0.8);
 	border-radius: 3px;
@@ -69,8 +69,8 @@ header > #main > .left > #banner-counter-container-box > .text {
 	color: #FFFFFF;
 	text-align: center;
 	padding: 5px;
-	}
-	
+}
+
 header > #main > .right > #login-container-box {
 	background-color: rgba(0, 0, 0, 0.50);
 	width: auto;
@@ -79,8 +79,8 @@ header > #main > .right > #login-container-box {
 	float: right;
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
-	}
-	
+}
+
 header > #main > .right > #login-container-box > form > input {
 	background-color: #f1f2f2;
 	width: 200px;
@@ -92,8 +92,8 @@ header > #main > .right > #login-container-box > form > input {
 	font-size: 13px;
 	font-weight: lighter;
 	color: #8a8a8a;
-	}
-	
+}
+
 header > #main > .right > #login-container-box > form > button {
 	background-color: #71bb5c;
 	width: auto;
@@ -105,13 +105,13 @@ header > #main > .right > #login-container-box > form > button {
 	font-family: 'Ubuntu';
 	font-size: 12px;
 	color: #FFFFFF;
-	}
-	
+}
+
 #main {
 	width: 990px;
 	margin: 0 auto;
-	}
-	
+}
+
 #main > #info-container-box {
 	background-image: url(/templates/brain/style/images/login/infoboxbg.png);
 	width: auto;
@@ -120,8 +120,8 @@ header > #main > .right > #login-container-box > form > button {
 	margin-top: 50px;
 	border-radius: 4px;
 	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
-	}
-	
+}
+
 #main > #info-container-box > #registerbutton {
 	border-radius: 4px;
 	background: #3BA800;
@@ -147,8 +147,8 @@ header > #main > .right > #login-container-box > form > button {
 	margin-top: 20px;
 	margin-left: 345px;
 	cursor: pointer;
-	}
-	#main > #info-container-box > #registerbuttonfb {
+}
+#main > #info-container-box > #registerbuttonfb {
     border-radius: 4px;
     background: #3BA800;
     background: -moz-linear-gradient(#3BA800 50%, #2C7E00 100%);
@@ -174,8 +174,8 @@ header > #main > .right > #login-container-box > form > button {
     margin-left: 345px;
     cursor: pointer;
 }
-	
-	#main > #registerbutton1 {
+
+#main > #registerbutton1 {
 	border-radius: 4px;
 	background: #3BA800;
 	background: -moz-linear-gradient(#3BA800 50%, #2C7E00 100%);
@@ -200,22 +200,22 @@ header > #main > .right > #login-container-box > form > button {
 	margin-top: 20px;
 	margin-left: 345px;
 	cursor: pointer;
-	}
-	
+}
+
 #main > #info-container-box > .text {
 	font-family: 'Open Sans';
 	font-weight: lighter;
 	font-size: 12px;
 	color: #FFFFFF;
-	}
-	
+}
+
 #main > #info-container-box > .text > b {
 	font-family: 'Ubuntu';
 	font-size: 18px;
 	font-weight: bold;
 	text-shadow: 0px 1px 1px black;
-	}
-	
+}
+
 #main > #recorder-container-box {
 	background: rgba(0, 0, 0, 1.0);
 	width: 250px;
@@ -226,14 +226,14 @@ header > #main > .right > #login-container-box > form > button {
 	border-radius: 4px;
 	border: 3px solid rgba(0,0,0,0.3);
 	margin-right: 30px;
-	}
-	
+}
+
 #main > #recorder-container-box > .text {
 	font-family: 'Open sans';
 	font-weight: lighter;
 	font-size: 12px;
 	color: #FFFFFF;
-	}
+}
 
 #main > #recorder-container-box > .text > b {
 	font-family: 'Ubuntu';
@@ -241,12 +241,12 @@ header > #main > .right > #login-container-box > form > button {
 	font-weight: 700;
 	text-shadow:0 1px 0 rgba(0,0,0,0.6);
 	text-transform: uppercase;
-	}
-	
+}
+
 .login{
 	background: #fff;
 	width:633px;
-	height:98px;
+	height:127px;
 	border-radius:3px;
 	float:left;
 	margin-left:25px;
@@ -287,19 +287,19 @@ input:focus{
 }
 
 button{
-	background:linear-gradient(to bottom, #3BA800 0%,#3BA800 50%,#2C7E00 51%,#2C7E00 100%);
-	width:95px;
-	height:97px;
-	position:absolute;
-	top:66px;
-	margin-left:10px;
-	border:0;
-	border-radius:3px;
-	cursor:pointer;
+    background: linear-gradient(to bottom, #3BA800 0%,#3BA800 50%,#2C7E00 51%,#2C7E00 100%);
+    width: 95px;
+    height: 88px;
+    margin-left: 10px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+    margin-top: -134px;
 }
 
 button:hover{
-	 background-color: #309b0c;
+	background-color: #309b0c;
     background-image: -moz-linear-gradient(top,  #309b0c 0%, #309b0c 50%, #2a870c 50%, #2a870c 50%, #2a870c 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#309b0c), color-stop(50%,#309b0c), color-stop(50%,#2a870c), color-stop(50%,#2a870c), color-stop(100%,#2a870c));
     background-image: -webkit-linear-gradient(top,  #309b0c 0%,#309b0c 50%,#2a870c 50%,#2a870c 50%,#2a870c 100%);
@@ -312,6 +312,27 @@ button:hover{
 button:focus{
 	outline:0;
 }
+.buttonforgottxt{
+	color: white;
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    font-weight: bold;
+}
+.buttonforgot{
+	background-color: #00adff;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+	
+}
+.buttonforgot:hover{
+	background-color: #0685c1;
+	cursor: pointer;
+	text-decoration: none;
+	
+	
+}
 
-	.alert { border-radius: 5px; margin-bottom: 10px; padding: 10px; border: 1px solid grey; border-bottom: 2px solid grey; background: #CCCCCC; color: #222222; }
-	.error { background: rgba(217, 7, 7, .85); border-color: rgba(217, 7, 7, .94); color: #FFFFFF; }
+.alert { border-radius: 5px; margin-bottom: 10px; padding: 10px; border: 1px solid grey; border-bottom: 2px solid grey; background: #CCCCCC; color: #222222; }
+.error { background: rgba(217, 7, 7, .85); border-color: rgba(217, 7, 7, .94); color: #FFFFFF; }

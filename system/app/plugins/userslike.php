@@ -48,7 +48,7 @@
 				}
 				echo'<b>(<font color="#00C103">';
 				echo $row['user_likes'];
-				echo '</font>)</b>'.$likeurl.' <img src="'.$config['hotelUrl'].'/templates/brain/style/images/icons/'.$userlikedIcon.'.png"></a>';
+				echo '</font>)</b>'.$likeurl.' <img src="'.$config['hotelUrl'].'/templates/'.$config['skin'].'/style/images/icons/'.$userlikedIcon.'.png"></a>';
 				if (isset($_GET['respect0']))
 				{
 					if ($_GET['username'] == $row['username'])
@@ -91,8 +91,9 @@
 					{
 						if (!$getUserLikes->RowCount() == 0)
 						{
-							$RemoveUserLike = $dbh->prepare("DELETE FROM users_like WHERE likefrom=:likefrom");
+							$RemoveUserLike = $dbh->prepare("DELETE FROM users_like WHERE likefrom=:likefrom AND userid = :userid");
 							$RemoveUserLike->bindParam(':likefrom', $_SESSION['id']);
+							$RemoveUserLike->bindParam(':userid', $row['id']);
 							$RemoveUserLike->execute();
 							$removeLikeMin = '1';
 							$removeUserLikeTable = $dbh->prepare("

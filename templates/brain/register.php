@@ -229,4 +229,4 @@
 				</body>
 			</html>
 			<script src="https://code.jquery.com/jquery-latest.min.js?v=4" type="text/javascript"></script>
-		<script src="/templates/brain/style/js/jquery.avatargenerate.js?v=13" type="text/javascript"></script>																
+		<script src="/templates/brain/style/js/jquery.avatargenerate.js?v=17" type="text/javascript"></script>	

@@ -54,7 +54,7 @@
 								<label style= "width: 20%;" class="col-lg-4 control-label">Email</label>
 								<div class="col-lg-8">
 									<input value= "<?php echo $key; ?>"type="email" class="form-control" name="useremail" id="useremail" placeholder="">
-									<i class="glyphicon glyphicon-lock form-control-feedback" style="right: 10px;"></i>
+									<i class="glyphicon glyphicon-envelope form-control-feedback" style="right: 10px;"></i>
 								</div>
 							</div>
 							

@@ -16,7 +16,7 @@
 		{
 			global $dbh;
 			$timeNow = strtotime("now");
-			$sessionKey  = 'Brain-1.7.0-'.substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 5)), 0, 25).'-SSO';
+			$sessionKey  = 'Brain-1.7.2-'.substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 5)), 0, 25).'-SSO';
 			if($page == 'client')
 			{
 				$stmt = $dbh->prepare("UPDATE users SET auth_ticket = :sso , last_online = :timenow WHERE id = :id");

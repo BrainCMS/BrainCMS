@@ -60,7 +60,7 @@
 						{
 							if (strlen($_POST['password_reset']) >= 6)
 							{
-								$getResetKey = $dbh->prepare("SELECT resetkey FROM resetpassword WHERE resetkey = :key AND enable = '0' LIMIT 1");
+								$getResetKey = $dbh->prepare("SELECT resetkey, enable , userid FROM resetpassword WHERE resetkey = :key AND enable = '0' LIMIT 1");
 								$getResetKey->bindParam(':key', $_POST['key']);
 								$getResetKey->execute();
 								$getInfo = $getResetKey->fetch();

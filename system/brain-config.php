@@ -32,7 +32,7 @@
 	$hotel['swfFolderSwf'] = "http://127.0.0.1/swf/gordon/PRODUCTION-201701242205-837386173/Habbo.swf";
 	
 	/* Website Setting */
-	$config['hotelUrl'] = "http://127.0.0.1";//Address of your hotel. Does not end with a "/"
+	$config['hotelUrl'] = "http:/127.0.0.1";//Address of your hotel. Does not end with a "/"
 	$config['skin'] = "brain"; //Skin/template of your website
 	$config['lang'] = "en"; //Language of your website /en/nl/es
 	$config['hotelName'] = "Brain"; //Name of your hotel
@@ -60,7 +60,7 @@
 	$email['mailServerPort'] = 587;
 	$email['SMTPSecure'] = 'TLS';
 	$email['mailUsername'] = 'gmail@gmail.com';
-	$email['mailPassword'] = '*****';
+	$email['mailPassword'] = '******';
 	$email['mailLogo'] = 'http://127.0.0.1/templates/brain/style/images/logo/logo.png';
 	$email['mailTemplate'] = '/system/app/plugins/PHPmailer/temp/resetpassword.html';
 	

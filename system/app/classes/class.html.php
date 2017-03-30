@@ -187,9 +187,6 @@
 					case "changename":
 					header('Location: '.$config['hotelUrl'].'/index');
 					break;
-					case "register":
-					$userref = 'lol';
-					break;
 					default:
 					//Nothing
 					break;

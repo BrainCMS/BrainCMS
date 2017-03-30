@@ -19,7 +19,7 @@
 		<body>
             <div id="site">
 				<div id="body">
-					<link rel="stylesheet" href="/templates/brain/style/css/index/style.css?v=4">
+					<link rel="stylesheet" href="/templates/brain/style/css/index/style.css?v=17">
 					<link rel="stylesheet" href="/templates/brain/style/css/index/StyleIndex.css?v=4">
 					<style type="text/css">
 						@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,300);
@@ -42,6 +42,7 @@
 											<div class="pfeil"> 	</div>
 											<input type="text" id="username" name="username" placeholder="<?php echo $lang['Iusername']; ?>">
 											<input type="password" id="password" name="password" placeholder="<?php echo $lang['Ipassword']; ?>">
+											<a style="text-decoration : none" href="/forget"><div class="buttonforgot"><div class="buttonforgottxt">Forgot password</div></div></a>
 												<button type="submit" class="submit" name="login"><img src="/templates/brain/style/images/login/go.gif">
 												</div>
 											</button>
