@@ -1,6 +1,6 @@
 # BrainCMS #
 
-BrainCMS is a Habbo Retro CMS by [RetroRipper][1]. Looking to [demo BrainCMS][2]? You can also play [Robbo Hotel][3].
+BrainCMS is a Habbo Retro CMS by [RetroRipper][1]. Looking to [demo BrainCMS][2]? You can also play [Playlegit.ca][3].
 
 ## What's in BrainCMS? ##
 - Choose start room in the brain-config.php file.
@@ -23,7 +23,7 @@ BrainCMS is a Habbo Retro CMS by [RetroRipper][1]. Looking to [demo BrainCMS][2]
 - Xampp/IIS 
 
 ### Version ###
-The latest stable vesion of BrainCMS is: v1.7.0
+The latest stable vesion of BrainCMS is: v1.7.2-STABLE.
 
 ### Updated ###
 	Userlike.php // You can now enable or disable it
@@ -61,4 +61,4 @@ The latest stable vesion of BrainCMS is: v1.7.0
 
 [1]: https://retroripper.com/braincms.php
 [2]: https://brain.retroripper.com
-[3]: https://robbo.pw
+[3]: http://playlegit.ca
