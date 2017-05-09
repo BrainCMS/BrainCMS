@@ -3,10 +3,14 @@
 ?>
 <title><?= $config['hotelName'] ?>: <?= User::userData('username') ?></title>
 <div class="center">
+	<?php
+		include_once 'includes/alerts.php';
+	?>
 	<div class="columleft">
 		<div class="boxuser">
 			<div class="userplate">
 				<img src="/templates/brain/style/images/icons/online/<?= User::userData('online') ?>.png" style="float:left;padding: 5px;">
+				<a href ="settingsavatar"><img src="/templates/brain/style/images/icons/editlook.gif" style="float: right;border-radius: 3px; padding: 4px;background: rgba(0, 0, 0, 0.44);"></a>
 				<div class="useravatar">
 					<div class="avatar" style="background-image:url(https://avatar-retro.com/habbo-imaging/avatarimage?figure=<?= User::userData('look') ?>&amp;direction=2&amp;head_direction=3&amp;action=crr=667&amp;gesture=sml);"></div>
 				</div>
@@ -89,7 +93,7 @@
 				</div>
 				<div class="refdiaboxtext">
 					<form method="post">
-						<input type="submit" class="submit" value="<?= $lang["MrefButton"] ?>" name="claimdiamonds" style="margin-top: 10px;">
+						<input type="submit" class="submit" value="<?= $lang["MrefButton"] ?>" name="claimdiamonds" id="claimdiamonds" style="margin-top: 10px;">
 					</form>
 				</div>
 			</div>
@@ -129,7 +133,7 @@
 							while ($row = $getem->fetch())
 							{
 								echo '<div class="groupboxbg">
-								<a class="tooltip" href="#"><div class="userNew" style="background: url('. $config['groupBadgeURL'].' '.filter($row['badge']).'); background-position: 30px 15px;width: 80px;float: left;background-repeat: no-repeat;"></div>
+								<a class="tooltip" href="#"><div class="userNew" style="background: url('. $config['groupBadgeURL'].''.filter($row['badge']).'); background-position: 30px 15px;width: 80px;float: left;background-repeat: no-repeat;"></div>
 								<div class="userNewName">
 								'. filter($row['name']).'
 								<span>

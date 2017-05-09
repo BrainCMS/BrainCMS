@@ -48,7 +48,7 @@ table {
 
 .builder-viewport {
     width: 490px;
-    min-height: 442px;
+    min-height: 388px; /** 442px */
     box-shadow: 0 5px 0 rgba( 0, 0, 0, .4 );
     border-radius: 0 0 8px 8px;
     -webkit-border-radius: 0 0 8px 8px;
@@ -60,7 +60,9 @@ table {
 /*
  * Navigation
  */
-
+.main-navigation {
+    margin-bottom: -2px;
+}
 .main-navigation ul {
     margin: 50px 0 0 0;
     display: block;
@@ -99,6 +101,7 @@ table {
 .sub-navigation {
     background: #eceae0;
     padding: 15px 10px 10px 10px;
+    height: 45px;
 }
 
 .sub-navigation li {
@@ -187,7 +190,7 @@ a.belts {
 
 #clothes-colors {
     width: 75%;
-    height: 400px;
+    height: 305px;
     float: left;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -208,13 +211,13 @@ a.belts {
 }
 
 #colors {
-    height: 40%;
+    height: 90px;
     max-height: 150px;
     margin: 15px 0;
 }
 
 #clothes {
-    height: 60%;
+    height: 165px;
     max-height: 250px;
 }
 
@@ -222,7 +225,7 @@ a.belts {
     float: left;
     background: #eceae0;
     width: 25%;
-    height: 400px;
+    height: 305px;
     border-radius: 0 0 8px 0;
     -webkit-border-radius: 0 0 8px 0;
     -moz-border-radius: 0 0 8px 0;

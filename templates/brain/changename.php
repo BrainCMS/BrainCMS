@@ -3,6 +3,9 @@
 ?>
 <title><?= $config['hotelName'] ?>: <?= $lang["Ssettings"] ?></title>
 <div class="center">
+<?php
+		include_once 'includes/alerts.php';
+	?>
 	<div style="width:100%;margin-left: 10px;" class="columleft">
 		<div class='box'>
 			<div class='title red'>Kies een gebruikersnaam</div>

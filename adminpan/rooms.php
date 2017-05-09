@@ -18,18 +18,37 @@
 								<tbody>
 									<strong><tr><td style="width: 5%;"><b>ID</b></td><td><b>Room Name</b></td><td><b>Room ID</b></td><td><b>Room State</b></td><td><b>Model</b><!--</td><td style="width: 5%;"><b>Bewerken</b></td></tr></strong>-->
 										<?php
-											$getArticles = $dbh->prepare("SELECT * FROM rooms ORDER BY id DESC");
-											$getArticles->execute();
-											while($news = $getArticles->fetch())
+											if ($config['hotelEmu'] == 'arcturus')
 											{
-												echo'';
-												echo'<tr>
-												<td>'.$news["id"].'</td>
-												<td style="width: 13%;">'.$news["caption"].'</td>
-												<td>'.$news["owner"].'</td>
-												<td style="width: 25%;">'.$news["state"].'</td>
-												<td>'.$news["model_name"].'</td>
-												</tr>';
+												$getArticles = $dbh->prepare("SELECT * FROM rooms ORDER BY id DESC");
+												$getArticles->execute();
+												while($news = $getArticles->fetch())
+												{
+													echo'';
+													echo'<tr>
+													<td>'.$news["id"].'</td>
+													<td style="width: 13%;">'.$news["name"].'</td>
+													<td>'.$news["id"].'</td>
+													<td style="width: 25%;">'.$news["state"].'</td>
+													<td>'.$news["model"].'</td>
+													</tr>';
+												}
+											}
+											else
+											{
+												$getArticles = $dbh->prepare("SELECT * FROM rooms ORDER BY id DESC");
+												$getArticles->execute();
+												while($news = $getArticles->fetch())
+												{
+													echo'';
+													echo'<tr>
+													<td>'.$news["id"].'</td>
+													<td style="width: 13%;">'.$news["caption"].'</td>
+													<td>'.$news["id"].'</td>
+													<td style="width: 25%;">'.$news["state"].'</td>
+													<td>'.$news["model_name"].'</td>
+													</tr>';
+												}
 											}
 										?>
 									</tbody>
@@ -40,4 +59,4 @@
 							<?php
 								include_once "includes/footer.php";
 								include_once "includes/script.php";
-							?>																									
+							?>																																

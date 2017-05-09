@@ -3,6 +3,9 @@
 ?>
 <title><?= $config['hotelName'] ?>: <?= $lang["Aads"] ?></title>
 <div class="center">
+<?php
+		include_once 'includes/alerts.php';
+	?>
 	<div style="width: 500px;"class="columleft">
 		<div class="box">
 			<div class="title">

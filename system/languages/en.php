@@ -61,6 +61,7 @@
 	$lang["Nonline"] = "Online";
 	$lang["Nstaff"] = "Management";
 	$lang["Nteams"] = "Teams";
+	$lang["Nsessionlog"] = "Login Log";
 	
 	//Me----------------------------------------------------------------------------------------------
 	$lang["Mgoto"] = "Check in ".$config['hotelName']."";
@@ -249,6 +250,7 @@
 	$lang["Scredits"] = "Credits";
 	$lang["Sduckets"] = "Duckets";
 	$lang["Sdiamond"] = "Diamonds";
+	$lang["Srespects"] = "Respect";
 	
 	//Online----------------------------------------------------------------------------------------------
 	$lang["Oonline"] = "Online ".$config['hotelName']."'s";
@@ -283,6 +285,10 @@
 	$lang["Bbantil"] = "You are banned from:";
 	$lang["Buntil"] = "to";
 	$lang["Bwrong"] = "<h4>Is it not right?</h4> Contact the Staff Team</b>";
+
+	//Alerts----------------------------------------------------------------------------------------------
+	$lang['Adiamondsclaim'] = 'You can claim diamonds by the referrer bank.';
+	$lang['AadminMessage'] = 'Message from the staff: ';
 	
 	
 	//***************************************** Classes languages ****************************************\\

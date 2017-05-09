@@ -28,9 +28,10 @@
 				$queryIp->execute();
 				while ($rowIp = $queryIp->fetch())
 				{
-					if (strtotime(gmdate($rowIp['expire'])) <= strtotime('now'))
+					if ($rowIp['expire'] >= strtotime('now'))
 					{
 						return true;
+						
 					}
 					else
 					{
@@ -50,7 +51,7 @@
 					$userBan->execute();
 					while ($rowUser = $userBan->fetch())
 					{
-						if (strtotime(gmdate($rowUser['expire'])) <= strtotime('now'))
+						if ($rowUser['expire'] >= strtotime('now'))
 						{
 							return true;
 						}
@@ -68,7 +69,7 @@
 		}
 		public static function page()
 		{
-			global $dbh, $emu, $config, $lang, $hotel, $version;
+			global $dbh, $emu, $config, $lang, $hotel, $version,$emuUse;
 			if (defined('PHP_VERSION') && PHP_VERSION >= 5.6) 
 			{
 				true;
@@ -80,7 +81,7 @@
 			}
 			if (self::checkBan(userIp(), User::userData('username')))
 			{
-				include A . G . H . S .'/pages/banned.php';
+				include Z . H . S .'/banned.php';
 				exit();
 			}
 			else
@@ -252,5 +253,4 @@
 				require_once $pluginDir."".basename($filename)."";
 			}
 		}
-	} 
-?>																								
+	}

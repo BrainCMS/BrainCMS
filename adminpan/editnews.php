@@ -11,14 +11,14 @@
 			<div class="col-md-12">
 				<section class="panel">
 					<header class="panel-heading">
-						Nieuws bericht <b><?php echo admin::EditNews("title"); ?></b> bewerken
+						Edit News Article <b><?php echo admin::EditNews("title"); ?></b>
 						<form name="mygallery" action="" method="POST">
 						</header>
 						<div class="panel-body">
 							<?php admin::EditNews("id"); 
 							admin::UpdateNews();?>
 							<div class="form-group">
-								<label class="col-sm-2 col-sm-2 control-label">Nieuws ID</label>
+								<label class="col-sm-2 col-sm-2 control-label">News ID</label>
 								<div class="col-sm-10">
 									<?php echo admin::EditNews("id"); ?>
 									<input type="hidden" name="id" value="<?php echo admin::EditNews("id"); ?>">
@@ -72,12 +72,12 @@
 							</div>
 							<br><br>
 							<div class="form-group">
-								<label class="col-sm-2 col-sm-2 control-label">Nieuws bericht</label>
+								<label class="col-sm-2 col-sm-2 control-label">News Articles</label>
 								<div class="col-sm-10">
 								<textarea id="editor1" name="longstory"  rows="15" cols="80"><?php echo admin::EditNews("longstory"); ?></textarea></div>
 							</div>
 							<br><br>
-							<button style="    margin-top: 10px;width: 140px;float: right;margin-right: 14px;" name="update" type="submit" class="btn btn-success">Nieuws opslaan</button>
+							<button style="    margin-top: 10px;width: 140px;float: right;margin-right: 14px;" name="update" type="submit" class="btn btn-success">Save the Article</button>
 						</div>
 					</section>
 				</div>

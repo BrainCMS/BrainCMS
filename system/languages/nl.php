@@ -60,6 +60,7 @@
 	$lang["Nonline"] = "Online";
 	$lang["Nstaff"] = "Management";
 	$lang["Nteams"] = "Teams";
+	$lang["Nsessionlog"] = "Login Log";
 	
 	//Me----------------------------------------------------------------------------------------------
 	$lang["Mgoto"] = "Ga naar ".$config['hotelName']."";
@@ -251,6 +252,7 @@
 	$lang["Scredits"] = "Credits";
 	$lang["Sduckets"] = "Duckets";
 	$lang["Sdiamond"] = "Diamanten";
+	$lang["Srespects"] = "Respect";
 	
 	//Online---------------------------------------------------------------------------------------------
 	$lang["Oonline"] = "Online ".$config['hotelName']."'s";
@@ -285,6 +287,9 @@
 	$lang["Buntil"] = "tot";
 	$lang["Bwrong"] = "<h4>Klopt dit niet?</h4> Neem contact op met het Staffteam</b>.";
 
+	//Alerts----------------------------------------------------------------------------------------------
+	$lang['Adiamondsclaim'] = 'Je kunt diamanten claimen bij de referrer bank.';
+	$lang['AadminMessage'] = 'Bericht van het staffteam: ';
 	
 	//***************************************** Classes languages ****************************************\\
 	

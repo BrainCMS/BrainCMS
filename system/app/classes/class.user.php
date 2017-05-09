@@ -78,15 +78,21 @@
 							$key = '5';
 							break;
 							default:
-							//Nothing
 							break;
 						}
-						$stmt = $dbh->prepare("SELECT ".$key." FROM users_currency WHERE user_id = :id AND type = :type");
+						$stmt = $dbh->prepare("SELECT ".$key.",user_id,type,amount FROM users_currency WHERE user_id = :id AND type = :type");
 						$stmt->bindParam(':id', $_SESSION['id']);
 						$stmt->bindParam(':type', $key);
 						$stmt->execute();
-						$row = $stmt->fetch();
-						echo filter($row['amount']);
+						if ($stmt->RowCount() > 0)
+						{
+							$row = $stmt->fetch();
+							return $row['amount'];
+						}
+						else
+						{
+							return '0';
+						}
 					}
 					else
 					{	
@@ -148,7 +154,8 @@
 			{
 				if ($getUsernameRefData['ip_reg'] == userIp())
 				{
-					html::error($lang["RsameIpRef"]);
+					//html::error($lang["RsameIpRef"]);
+					echo 'ref_error';
 				}
 				else
 				{
@@ -157,13 +164,14 @@
 			}
 			else
 			{	
-				html::error($lang["RnotExist"]);
+				//html::error($lang["RnotExist"]);
+				echo 'ref_error';
 				return false;
 			}
 		}
 		public static function login()
 		{
-			global $dbh,$config,$lang;
+			global $dbh,$config,$lang,$emuUse;
 			if (isset($_POST['login']))
 			{
 				if (!empty($_POST['username']))
@@ -181,18 +189,27 @@
 								$_SESSION['id'] = $row['id'];
 								if (!$config['maintenance'] == true)
 								{
-									if ($config['hotelEmu'] == 'arcturus')
-									{
-										$userLastIp = 'ip_current';		
-									}
-									else
-									{
-										$userLastIp = 'ip_last';	
-									}
-									$stmt = $dbh->prepare("UPDATE users SET ".$userLastIp." = :userip WHERE id = :id");
-									$stmt->bindParam(':id', $_SESSION['id']);
-									$stmt->bindParam(':userip', userIp());
-									$stmt->execute(); 
+									$userUpdateIp = $dbh->prepare("UPDATE users SET ".$emuUse['ip_last']." = :userip WHERE id = :id");
+									$userUpdateIp->bindParam(':id', $_SESSION['id']);
+									$userUpdateIp->bindParam(':userip', userIp());
+									$userUpdateIp->execute(); 
+									//User Session Log//
+									$insertUserSession = $dbh->prepare("
+									INSERT INTO
+									user_session_log
+									(userid,ip,date,browser)
+									VALUES
+									(
+									:userid, 
+									:ip,
+									:date,
+									:browser
+									)");
+									$insertUserSession->bindParam(':userid', $_SESSION['id']);
+									$insertUserSession->bindParam(':ip', userIp());
+									$insertUserSession->bindParam(':date', strtotime('now'));
+									$insertUserSession->bindParam(':browser', $_SERVER['HTTP_USER_AGENT']);
+									$insertUserSession->execute();
 									header('Location: '.$config['hotelUrl'].'/me');
 								}
 								else
@@ -217,7 +234,7 @@
 		public static function register()
 		{
 			$userRealIp = userIp();
-			global $config, $lang, $dbh;
+			global $config, $lang, $dbh,$emuUse;
 			if (isset($_POST['register']))
 			{
 				if ($config['registerEnable'] == true)
@@ -242,17 +259,8 @@
 													{
 														if ($_POST['password'] == $_POST['password_repeat'])
 														{	
-															if ($config['hotelEmu'] == 'arcturus')
-															{
-																$userRegIp = 'ip_register';		
-															}
-															else
-															{
-																$userRegIp = 'ip_reg';	
-															}
-															$stmt = $dbh->prepare("SELECT ".$userRegIp." FROM users WHERE ".$userRegIp." = :userip");
-															$stmt->bindParam(':userip', $userRealIp);
-															
+															$stmt = $dbh->prepare("SELECT ".$emuUse['ip_last']." FROM users WHERE ".$emuUse['ip_last']." = :userip");
+															$stmt->bindParam(':userip',  userIp());
 															$stmt->execute();
 															if ($stmt->RowCount() < 4)
 															{
@@ -265,14 +273,14 @@
 																	if ($_POST['g-recaptcha-response'])
 																	{			
 																		$motto = filter($_POST['motto'] );
-																		$avatar = filter($_POST['habbo-avatar']);
+																		$avatar = filter($_POST['avatar']);
 																		$password = self::hashed($_POST['password']);
 																		if ($config['hotelEmu'] == 'arcturus')
 																		{
 																			$addNewUser = $dbh->prepare("
 																			INSERT INTO
 																			users
-																			(username, password, rank, auth_ticket, motto, account_created, mail, look, ip_current, ip_register, credits)
+																			(username, password, rank, auth_ticket, motto, account_created, last_online, mail, look, ip_current, ip_register, credits)
 																			VALUES
 																			(
 																			:username, 
@@ -281,6 +289,7 @@
 																			:sso,
 																			:motto, 
 																			:time, 
+																			:last_online,
 																			:email, 
 																			:avatar,
 																			:userip, 
@@ -295,15 +304,18 @@
 																			$addNewUser->bindParam(':avatar', $avatar);
 																			$addNewUser->bindParam(':credits', $config['credits']);
 																			$addNewUser->bindParam(':userip', userIp());
-																			$addNewUser->bindParam(':time', time());
+																			$addNewUser->bindParam(':time', strtotime('now'));
+																			$addNewUser->bindParam(':last_online', strtotime('now'));
 																			$addNewUser->execute();
+																			
+																			
 																		}
 																		else
 																		{
 																			$addNewUser = $dbh->prepare("
 																			INSERT INTO
 																			users
-																			(username, password, rank, auth_ticket, motto, account_created, mail, look, ip_last, ip_reg, credits, activity_points, vip_points)
+																			(username, password, rank, auth_ticket, motto, account_created, last_online, mail, look, ip_last, ip_reg, credits, activity_points, vip_points)
 																			VALUES
 																			(
 																			:username, 
@@ -312,6 +324,7 @@
 																			:sso,
 																			:motto, 
 																			:time, 
+																			:last_online,
 																			:email, 
 																			:avatar,
 																			:userip, 
@@ -330,7 +343,8 @@
 																			$addNewUser->bindParam(':duckets', $config['duckets']);
 																			$addNewUser->bindParam(':diamonds', $config['diamonds']);
 																			$addNewUser->bindParam(':userip', userIp());
-																			$addNewUser->bindParam(':time', time());
+																			$addNewUser->bindParam(':time', strtotime('now'));
+																			$addNewUser->bindParam(':last_online', strtotime('now'));
 																			$addNewUser->execute();
 																		}
 																		$lastId = $dbh->lastInsertId();
@@ -386,77 +400,94 @@
 																				$addDiamonds->execute(); 
 																			}
 																			$_SESSION['id'] = $lastId;
+																			echo 'succes';
+																			return;
 																		}
 																		//User referrer//
 																		else
 																		{
 																			$_SESSION['id'] = $lastId;
+																			echo 'succes';
+																			return;
 																		}
 																	}
 																	else
 																	{
-																		return html::error($lang["Rrobot"]); 
+																		echo 'robot';
+																		return;
 																	}
 																}
 															}
 															else
 															{
-																return html::error($lang["Rmaxaccounts"]); 
+																echo 'to_many_ip';
+																return;
 															}
 														}
 														else
 														{
-															return html::error($lang["Rpasswordswrong"]);
+															echo 'password_repeat_error';
+															return;
 														}
 													}
 													else
 													{
-														return html::error($lang["Rpasswordshort"]); 
+														echo 'short_password';
+														return;
 													}
 												}
 												else
 												{
-													return html::error($lang["Remailexists"]);
+													echo 'used_email';
+													return;
 												}
 											}
 											else
 											{
-												return html::error($lang["Rusernameused"]);
+												echo 'used_username';
+												return;
 											}
 										}
 										else
 										{
-											return html::error($lang["Remailnotallowed"]);
+											echo 'valid_email';
+											return;
 										}
 									}
 									else
 									{
-										return html::error($lang["Remailempty"]);
+										echo 'empty_email';
+										return;
 									}
 								}
 								else
 								{
-									return html::error($lang["Rpasswordsempty"]); 
+									echo 'empty_password_repeat';
+									return;
 								}
 							}
 							else
 							{
-								return html::error($lang["Rpasswordsempty"]); 
+								echo 'empty_password';
+								return;
 							}
 						}
 						else
 						{
-							return html::error($lang["Rusernameshort"]);
+							echo 'empty_username';
+							return;
 						}
 					}
 					else
 					{
-						return html::error($lang["Rusrnameempty"]);
+						echo 'empty_username';
+						return;
 					}
 				}
 				else
 				{
-					return html::error($lang["RregisterDisable"]);
+					echo 'register_disable';
+					return;
 				}
 			}
 		}
@@ -678,5 +709,4 @@
 				}
 			}
 		}
-	}
-?>																																	
+	}																				

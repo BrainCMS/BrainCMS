@@ -31,7 +31,7 @@
 					break;
 				}
 				$username = User::userData('username');
-				$AddSollie = $dbh->prepare("INSERT INTO staffApplication (
+				$AddSollie = $dbh->prepare("INSERT INTO staffapplication (
 				username, 
 				realname, 
 				skype, 

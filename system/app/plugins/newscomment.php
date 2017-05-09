@@ -5,7 +5,7 @@
 	}
 	function newsComment()
 	{
-		global $dbh,$lang;
+		global $dbh,$lang,$config;
 		if (isset($_POST['newscomment']))
 		{
 			$count = $dbh->prepare("SELECT userid,newsid FROM cms_news_message WHERE userid = :id AND newsid = :newsid");
@@ -67,4 +67,3 @@
 			}
 		}
 	}
-?>	

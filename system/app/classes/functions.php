@@ -27,9 +27,10 @@
 	// Check version of BrainCMS
 	function checkVersion()
 	{
+		global $config;
 		$script = file_get_contents("http://brain.retroripper.com/version.txt");
 		$update = file_get_contents("http://brain.retroripper.com/update.txt");
-		$version = '1.7.2';
+		$version = $config['brainversion'];
 		if($version == $script) {
 			echo'<div style = "width: 100%;
 			background-color: green;
@@ -37,7 +38,7 @@
 			padding: 10px;
 			color: white;
 			margin-bottom: 10px;
-			font-size: 17px;">Deze versie van brainCMS is up to date! V '.$script.'</div>';
+			font-size: 17px;">This version of BrainCMS is up to date! You have the V'.$script.'</div>';
 			} else {
 			echo'<div style = "width: 100%;
 			background-color: red;
@@ -45,7 +46,7 @@
 			padding: 10px;
 			color: white;
 			margin-bottom: 10px;
-			font-size: 17px;">Er is een nieuwe versie beschiktbaar! V '.$script.'</div>
+			font-size: 17px;">There is a new version of BrainCMS available! You have V'.$version.' and the latest version is V'.$script.'</div>
 			<div style = "width: 100%;
 			background-color: green;
 			border-radius: 5px;
@@ -75,5 +76,5 @@
 			$_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
 		}
 		return $_SERVER['REMOTE_ADDR'];
-	}
-?>
+	}	
+			

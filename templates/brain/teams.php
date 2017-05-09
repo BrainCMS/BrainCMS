@@ -3,6 +3,9 @@
 ?>
 <title><?= $config['hotelName'] ?>: <?= $lang["Tteams"] ?></title>
 <div class="center">
+<?php
+		include_once 'includes/alerts.php';
+	?>
 	<div style="width: 600px;"class="columleft">
 		<style>.staff-offline{text-indent:-9999px;width:0px;position:absolute;margin-top:6px;margin-left:7px;height:0px;border:5px solid #F37373;box-shadow:0px 0px 0px 1px rgba(0,0,0,0.2);border-radius:50%;}.staff-online{text-indent:-9999px;width:0px;position:absolute;margin-top:6px;margin-left:7px;height:0px;border:5px solid #73F375;box-shadow:0px 0px 0px 1px rgba(0,0,0,0.2);border-radius:50%;}</style>
 		<?php

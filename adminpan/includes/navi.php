@@ -70,6 +70,11 @@
 							</a>
 							</li>
 							<li>
+							<a href="'.$config['hotelUrl'].'/adminpan/tradelogs">
+							<i class="fa fa-desktop"></i> <span>Trade Logs</span>
+							</a>
+							</li>
+							<li>
 							<a href="'.$config['hotelUrl'].'/adminpan/bans">
 							<i class="fa fa-users"></i> <span>Banlist</span>
 							</a>

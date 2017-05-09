@@ -53,4 +53,3 @@
 		$sql->execute();
 		return filter($sql->RowCount());
 	}
-?>

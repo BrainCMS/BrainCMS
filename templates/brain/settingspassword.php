@@ -3,6 +3,9 @@
 ?>
 <title><?= $config['hotelName'] ?>: <?= $lang["Ssettings"] ?></title>
 <div class="center">
+<?php
+		include_once 'includes/alerts.php';
+	?>
 	<div style="margin-left: 0px;" class="columright">
 		<div style = "" class="box">
 			<div class="title">
@@ -11,7 +14,8 @@
 			<div class="mainBox" style="float;left">
 			<b><?= $lang["Schangepassword"] ?></a></b><br>
 			<a href="/settingsemail"><?= $lang["Schangeemail"] ?></a><br>
-			<a href="/settingshotel"><?= $lang["Shotelsettings"] ?></a>
+			<a href="/settingshotel"><?= $lang["Shotelsettings"] ?></a><br>
+			<a href="/settingsavatar">My Wardrope</a>
 			</div>
 		</div>
 	</div>

@@ -23,4 +23,3 @@
 		font-family: Tahoma;'><b>BrainCMS Configuration Error:</b><br>I was unable to connect to the provided MySQL server. Please ask the administrator to review the error message log for details.</div>"); 
 		die();
 	}
-?>			

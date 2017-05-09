@@ -2,7 +2,6 @@
 	staffCheck();
 	Game::sso('client');	
 	Game::homeRoom();	
-	
 ?>
 <html>
 </body>
@@ -14,11 +13,36 @@
 	<script src="/templates/brain/client/js/flashclient.js"></script>
 	<script src="/templates/brain/client/js/flash_detect_min.js"></script>
 	<script src="/templates/brain/client/js/client.js" type="text/javascript"></script>
-</head>
+	<link rel="stylesheet" href="/templates/brain/client/css/client.css?v=5" type="text/css">
+	</head>
 <body>
+	<?php
+		if($hotel['onlineCounter'] == true)
+		{
+		?>
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$.ajaxSetup({
+					cache:true
+				});
+				setInterval(function() {
+					$('#onlinecount').load('/onlinecountclient');
+				}, 8000);
+				$( "#onlinecount").click(function() {
+					$('#onlinecount').load('/onlinecountclient');
+				});
+			});
+		</script>
+		<div class="clientOnlineBox">
+			<div class="clientOnlineBoxTxt" id="onlinecount"><small><b><?= Game::usersOnline() ?></b> <?= $config['hotelName'] ?>'s online</small></div>
+			<img src="/templates/brain/client/images/onlineiconclient.png" style="width:29px;height:28px;ht; */position: absolute;margin-left: 130px;margin-top: -19px;">
+		</div>
+		<?php
+		}
+	?>
 	<center>
 		<div id="client-ui">
-			<div id="client" style='position:absolute; left:0; right:0; top:0; bottom:0; overflow:hidden; height:100%; width:100%;'></div>
+			<div class="client" id="client"></div>
 		</div>
 		<script>
 			var Client = new SWFObject("<?= $hotel['swfFolderSwf'] ?>", "client", "100%", "100%", "10.0.0");
@@ -45,14 +69,12 @@
 			Client.addVariable("client.starting", "<?= $config['hotelName'] ?> is loading...");
 			Client.addVariable("flash.client.url", "<?= $hotel['swfFolder'] ?>/"); 
 			Client.addVariable("flash.client.origin", "popup");
-			Client.addVariable("nux.lobbies.enabled", "true");
-			Client.addVariable("country_code", "NL");
+			Client.addVariable("ads.domain", "");
+			Client.addVariable("diamonds.enabled", '<?= $hotel['diamonds.enabled'] ?>');
 			Client.addParam('base', '<?= $hotel['swfFolder'] ?>/');
 			Client.addParam('allowScriptAccess', 'always');
-			Client.addParam('menu', false);
 			Client.addParam('wmode', "opaque");
 			Client.write('client');
-			
 			FlashExternalInterface.signoutUrl = "<?= $config['hotelUrl'] ?>/logout";
 		</script>
 	</center>
@@ -60,16 +82,4 @@
 </html>
 </center>
 </div>
-<script>
-	//no flash?!
-	if(!FlashDetect.installed){
-		window.location.href = "<?= $config['hotelUrl'] ?>/noflash.php"; 	
-	}
-</script>
 </head>
-
-
-
-
-
-

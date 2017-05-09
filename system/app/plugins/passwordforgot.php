@@ -128,4 +128,3 @@
 		$mail->AddAddress($useEmail);
 		$mail->Send();
 	}
-?>

@@ -1,3 +1,3 @@
 <div class="boxfooter">
-	<?= $config['hotelName'] ?> hotel &copy; 2016 - 2017
+	<div style="float: left;"><?= $config['hotelName'] ?> hotel &copy; 2016 - 2017</div>  <div style="float: right;">Brain Version: <?= $config['brainversion'] ?></div>
 </div>

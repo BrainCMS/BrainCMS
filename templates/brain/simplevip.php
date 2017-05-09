@@ -3,6 +3,9 @@
 ?>
 <title><?= $config['hotelName'] ?>: VIP Kopen</title>
 <div class="center">
+<?php
+		include_once 'includes/alerts.php';
+	?>
 	<div class="columleft">
 				<div class="box">
 				<div class="title blue">

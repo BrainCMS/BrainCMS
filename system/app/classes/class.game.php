@@ -14,13 +14,12 @@
 	{
 		public static function sso($page)
 		{
-			global $dbh;
-			$timeNow = strtotime("now");
-			$sessionKey  = 'Brain-1.7.2-'.substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 5)), 0, 25).'-SSO';
+			global $dbh,$config;
+			$sessionKey  = 'Brain-'.$config['brainversion'].'-'.substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 5)), 0, 25).'-SSO';
 			if($page == 'client')
 			{
 				$stmt = $dbh->prepare("UPDATE users SET auth_ticket = :sso , last_online = :timenow WHERE id = :id");
-				$stmt->bindParam(':timenow', $timeNow);
+				$stmt->bindParam(':timenow',  strtotime("now"));
 				$stmt->bindParam(':id', $_SESSION['id']);
 				$stmt->bindParam(':sso', $sessionKey);
 				$stmt->execute();

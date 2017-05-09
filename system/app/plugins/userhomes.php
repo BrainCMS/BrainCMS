@@ -22,20 +22,24 @@
 					//Nothing
 					break;
 				}
-				$stmt = $dbh->prepare("SELECT user_id,users_currency,type FROM users_currency WHERE user_id = :id AND type = :type");
-				$stmt->bindParam(':id', $_SESSION['id']);
-				$stmt->bindParam(':type', $key);
-				$stmt->execute();
-				$row = $stmt->fetch();
-				echo filter($row['amount']);
+				$getUser = $dbh->prepare("SELECT id,username FROM users WHERE username = :user");
+				$getUser->bindParam(':user', $_GET['user']);
+				$getUser->execute();
+				$usersSql = $getUser->fetch();
+				$getUserCurrency = $dbh->prepare("SELECT ".$key.",user_id,type,amount FROM users_currency WHERE user_id = :id AND type = :type");
+				$getUserCurrency->bindParam(':type', $key);
+				$getUserCurrency->bindParam(':id', $usersSql['id']);
+				$getUserCurrency->execute();
+				$getUserCurrencyData = $getUserCurrency->fetch();
+				echo $getUserCurrencyData['amount'];
 			}
 			else
 			{	
-				$stmt = $dbh->prepare("SELECT id,username,motto,credits,look,account_created,last_online,mail FROM users WHERE id = :id");
-				$stmt->bindParam(':id', $_SESSION['id']);
-				$stmt->execute();
-				$row = $stmt->fetch();
-				return filter($row[$key]);
+				$getUser = $dbh->prepare("SELECT id,username,motto,credits,look,account_created,last_online,mail FROM users WHERE username = :user");
+				$getUser->bindParam(':user', $_GET['user']);
+				$getUser->execute();
+				$usersSql = $getUser->fetch();
+				return $usersSql[$key];
 			}
 		}
 		else{

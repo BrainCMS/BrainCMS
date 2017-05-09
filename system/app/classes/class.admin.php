@@ -48,30 +48,68 @@
 		}
 		public static function UpdateUser()
 		{
-			global $dbh;
+			global $dbh,$config;
 			if (isset($_POST['update'])) 
 			{
-				$upateUser = $dbh->prepare("UPDATE users SET 
-				motto=:motto,
-				username=:name,
-				mail=:mail,
-				credits=:credits,
-				vip_points=:vip_points,
-				activity_points=:activity_points,
-				teamrank=:teamrank,
-				rank=:rank
-				WHERE username = :name");
-				$upateUser->bindParam(':motto', $_POST['motto']); 
-				$upateUser->bindParam(':name', $_POST['naam']); 
-				$upateUser->bindParam(':mail', $_POST['mail']); 
-				$upateUser->bindParam(':credits', $_POST['credits']); 
-				$upateUser->bindParam(':vip_points', $_POST['vip_points']); 
-				$upateUser->bindParam(':activity_points', $_POST['activity_points']); 
-				$upateUser->bindParam(':teamrank', $_POST['teamrank']); 
-				$upateUser->bindParam(':rank', $_POST['rank']); 
-				$upateUser->execute(); 
-				Admin::succeed("The user is saved!");
-			}	
+				if ($config['hotelEmu'] == 'arcturus')
+				{
+					$upateUser = $dbh->prepare("UPDATE users SET 
+					motto=:motto,
+					username=:name,
+					mail=:mail,
+					credits=:credits,
+					teamrank=:teamrank,
+					rank=:rank
+					WHERE username = :name");
+					$upateUser->bindParam(':motto', $_POST['motto']); 
+					$upateUser->bindParam(':name', $_POST['naam']); 
+					$upateUser->bindParam(':mail', $_POST['mail']); 
+					$upateUser->bindParam(':credits', $_POST['credits']); 
+					$upateUser->bindParam(':teamrank', $_POST['teamrank']); 
+					$upateUser->bindParam(':rank', $_POST['rank']); 
+					$upateUser->execute(); 
+					$getUserCurrency = $dbh->prepare("SELECT * FROM users WHERE username=:username LIMIT 1");
+					$getUserCurrency->bindParam(':username', $_POST['naam']);
+					$getUserCurrency->execute();
+					$getUserCurrencyData = $getUserCurrency->fetch();
+					$updateUserCurrencyDuckets = $dbh->prepare("UPDATE users_currency SET 
+					amount=:activity_points
+					WHERE user_id = :user_id and type = 0");
+					$updateUserCurrencyDuckets->bindParam(':user_id', $getUserCurrencyData['id']);
+					$updateUserCurrencyDuckets->bindParam(':activity_points', $_POST['activity_points']);
+					$updateUserCurrencyDuckets->execute(); 
+					$updateUserCurrencyDiamonds = $dbh->prepare("UPDATE users_currency SET 
+					amount=:vip_points
+					WHERE user_id = :user_id and type = 5");
+					$updateUserCurrencyDiamonds->bindParam(':user_id', $getUserCurrencyData['id']);
+					$updateUserCurrencyDiamonds->bindParam(':vip_points', $_POST['vip_points']); 
+					$updateUserCurrencyDiamonds->execute(); 
+					Admin::succeed("The user is saved!");
+				}
+				else
+				{
+					$upateUser = $dbh->prepare("UPDATE users SET 
+					motto=:motto,
+					username=:name,
+					mail=:mail,
+					credits=:credits,
+					vip_points=:vip_points,
+					activity_points=:activity_points,
+					teamrank=:teamrank,
+					rank=:rank
+					WHERE username = :name");
+					$upateUser->bindParam(':motto', $_POST['motto']); 
+					$upateUser->bindParam(':name', $_POST['naam']); 
+					$upateUser->bindParam(':mail', $_POST['mail']); 
+					$upateUser->bindParam(':credits', $_POST['credits']); 
+					$upateUser->bindParam(':vip_points', $_POST['vip_points']); 
+					$upateUser->bindParam(':activity_points', $_POST['activity_points']); 
+					$upateUser->bindParam(':teamrank', $_POST['teamrank']); 
+					$upateUser->bindParam(':rank', $_POST['rank']); 
+					$upateUser->execute(); 
+					Admin::succeed("The user is saved!");
+				}
+			}
 		}
 		public static function UpdateUserOfTheWeek()
 		{
@@ -136,7 +174,7 @@
 		public static function searchUserOfTheWeek()
 		{
 			global $dbh,$config;
-			if(isset($_POST['zoek'])) {	
+			if(isset($_POST['searching'])) {	
 				$searchUser = $dbh->prepare("SELECT * FROM users WHERE username = :user");
 				$searchUser->bindParam(':user', $_POST['user']); 
 				$searchUser->execute();
@@ -149,22 +187,79 @@
 					Admin::error("User ".$_POST['user']." not found!");
 				}
 			}
+			if(isset($_POST['delete'])) {	
+				$upateUser = $dbh->prepare("UPDATE uotw SET userid = '0' ,text = 'empty'");
+				$upateUser->execute();
+				Admin::succeed("You have removed UOTW");
+			}
 		}
 		public static function EditUser($variable)
 		{
-			global $dbh;
+			global $dbh,$config;
 			if (isset($_GET['user'])) {
-				$getUser = $dbh->prepare("SELECT * FROM users WHERE username=:username LIMIT 1");
-				$getUser->bindParam(':username', $_GET['user']);
-				$getUser->execute();
-				if ($getUser->RowCount() == 1) 
+				if ($config['hotelEmu'] == 'arcturus')
 				{
-					$user = $getUser->fetch();
-					return filter($user[$variable]);
-				} 
-				else 
+					if ( in_array($variable, array('activity_points', 'vip_points')) )
+					{
+						switch($variable)
+						{
+							case "activity_points":
+							$variable = '0';
+							break;
+							case "vip_points":
+							$variable = '5';
+							break;
+							default:
+							break;
+						}
+						$getUserCurrency = $dbh->prepare("SELECT * FROM users WHERE username=:username LIMIT 1");
+						$getUserCurrency->bindParam(':username', $_GET['user']);
+						$getUserCurrency->execute();
+						$getUserCurrencyData = $getUserCurrency->fetch();
+						$stmt = $dbh->prepare("SELECT ".$variable.",user_id,type,amount FROM users_currency WHERE user_id = :id AND type = :type");
+						$stmt->bindParam(':id', $getUserCurrencyData['id']);
+						$stmt->bindParam(':type', $variable);
+						$stmt->execute();
+						if ($stmt->RowCount() > 0)
+						{
+							$row = $stmt->fetch();
+							return $row['amount'];
+						}
+						else
+						{
+							return '0';
+						}
+					}
+					else
+					{	
+						$getUser = $dbh->prepare("SELECT * FROM users WHERE username=:username LIMIT 1");
+						$getUser->bindParam(':username', $_GET['user']);
+						$getUser->execute();
+						if ($getUser->RowCount() == 1) 
+						{
+							$user = $getUser->fetch();
+							return filter($user[$variable]);
+						} 
+						else 
+						{
+							Admin::error("user not found!"); exit;
+						}
+					}
+				}
+				else
 				{
-					Admin::error("user not found!"); exit;
+					$getUser = $dbh->prepare("SELECT * FROM users WHERE username=:username LIMIT 1");
+					$getUser->bindParam(':username', $_GET['user']);
+					$getUser->execute();
+					if ($getUser->RowCount() == 1) 
+					{
+						$user = $getUser->fetch();
+						return filter($user[$variable]);
+					} 
+					else 
+					{
+						Admin::error("user not found!"); exit;
+					}
 				}
 			}
 		}
@@ -210,7 +305,7 @@
 			Global $dbh,$config;
 			if (isset($_GET['look'])) 
 			{
-				$getSollie = $dbh->prepare("SELECT * FROM staffApplication WHERE id=:look LIMIT 1");
+				$getSollie = $dbh->prepare("SELECT * FROM staffapplication WHERE id=:look LIMIT 1");
 				$getSollie->bindParam(':look', $_GET['look']);
 				$getSollie->execute();
 				if ($getSollie->RowCount() == 1) 
@@ -241,7 +336,7 @@
 			Global $config, $dbh;
 			if(isset($_GET['delete'])) 
 			{ 
-				$deleteSollie = $dbh->prepare("DELETE FROM staffApplication WHERE id=:newsid");
+				$deleteSollie = $dbh->prepare("DELETE FROM staffapplication WHERE id=:newsid");
 				$deleteSollie->bindParam(':newsid', $_GET['delete']);
 				$deleteSollie->execute();
 				Admin::succeed('Application removed!');
@@ -279,7 +374,7 @@
 						:slogan,
 						:news,
 						:id,
-						'" . time() . "',
+						:time,
 						'1',
 						'1',
 						'1'
@@ -289,6 +384,7 @@
 						$postNews->bindParam(':topstory', $_POST['topstory']);
 						$postNews->bindParam(':news', $_POST['news']);
 						$postNews->bindParam(':id', $_SESSION['id']);
+						$postNews->bindParam(':time', strtotime('now'));
 						$postNews->execute();
 						$_SESSION['title'] = '';
 						$_SESSION['kort'] = '';
@@ -311,5 +407,4 @@
 			{
 			}
 		}
-	}
-?>							
+	}						

@@ -4,7 +4,10 @@
 <style></style>
 <title><?= $config['hotelName'] ?>: <?= userHome('username'); ?> </title>
 <div class="center">
-	<div style="    width: 500px; margin-left: 0px;" class="columright">
+<?php
+		include_once 'includes/alerts.php';
+	?>
+	<div style="width: 500px; margin-left: 0px;" class="columright">
 		<div style = "" class="box">
 			<div class="title">
 				<?= userHome('username'); ?>'s <?= $lang["Huserprofile"] ?> <?= userlike(userHome('id')) ?>
@@ -28,10 +31,10 @@
 							<?= userHome('username'); ?>  <?= $lang["Hhas"] ?> <b> <?= userHome('vip_points'); ?> </b> <?= $lang["Hdiamond"] ?>
 						</div>
 						<div class='boxx register'>
-							<?= $lang["Hjoined"] ?> <b><?php echo date("y-m-d, H:i",userHome('account_created')); ?></b>
+							<?= $lang["Hjoined"] ?> <b><?php echo date("d-m-y, H:i",userHome('account_created'));?></b>
 						</div>
 						<div class='boxx register'>
-							<?= $lang["Hlastonline"] ?> <b><?php echo date("y-m-d, H:i", userHome('last_online')); ?></b>
+							<?= $lang["Hlastonline"] ?> <b><?php echo date("d-m-y, H:i", userHome('last_online')); ?></b>
 						</div>
 					</div>
 					<div class="boxbg2">

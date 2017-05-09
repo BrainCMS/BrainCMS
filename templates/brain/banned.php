@@ -44,7 +44,7 @@
 							{
 								$user = null;
 							}
-							$banQuery = $dbh->prepare("SELECT * FROM bans WHERE (bantype = 'user' && value = :user) OR (bantype = 'ip' && value = '".checkCloudFlare()."')");
+							$banQuery = $dbh->prepare("SELECT * FROM bans WHERE (bantype = 'user' && value = :user) OR (bantype = 'ip' && value = '".userIp()."')");
 							$banQuery->bindParam(':user', $user); 
 							$banQuery->execute(); 
 							while($banInfo = $banQuery->fetch())
@@ -56,6 +56,22 @@
 							<br /><br />
 							<?= $lang["Bbantil"] ?> <b><u><?php echo gmdate("d-m-Y H:i", $banInfo['added_date']); ?></u></b> <?= $lang["Buntil"] ?> <b><u><?php echo gmdate("d-m-Y H:i", $banInfo['expire']); ?></u></b>.<br />Ban ID: <b><?= $banInfo['id']; ?></b><br /><hr>
 							<?= $lang["Bwrong"]  ?>
+							<br>
+							
+							<?php 
+								
+								if ($banInfo['expire'] <= strtotime('now'))
+								{
+									echo'Verlopen';
+								}
+								else
+								{
+							echo'No niet verlopen';
+								}
+								
+							?>
+							
+							
 							<?php
 							}
 						?>
@@ -67,5 +83,5 @@
 					<span style="cursor:pointer;text-decoration:underline;" class='lireSuite' onclick="document.location.href='#'">Privacyverklaring</span> |
 					<span style="cursor:pointer;text-decoration:underline;" class='lireSuite' onclick="document.location.href='#'">Gids voor ouders</span>
 				</div>
-			</body>
-		</html>										
+				</body>
+				</html>														

@@ -1,7 +1,7 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-		<link rel="stylesheet" href="/templates/brain/style/css/main2.css?v=5" type="text/css">
+		<link rel="stylesheet" href="/templates/brain/style/css/main2.css?v=22" type="text/css">
 		<link rel="stylesheet" href="/templates/brain/style/css/home.css" type="text/css">
 	</head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -31,7 +31,7 @@
 				$('#roomcount').load('/roomcount');
 			});
 		});
-	</script>
+		</script>
 	<body>
 		<header id="mainheader">
 			<div class="center">
@@ -65,6 +65,7 @@
 									<a href="/me"><?= User::userData('username') ?></a>
 									<a href="/settingspassword"><?= $lang["Naccountsettings"] ?></a> 
 									<a href="/home/<?= User::userData('username') ?>"><?= $lang["Nmyprofile"] ?></a>
+									<a href="/sessionlog"><?= $lang["Nsessionlog"] ?></a>
 									<a href="/logout"><?= $lang["NsignOut"] ?></a>
 								</div>
 							</li>
@@ -101,4 +102,6 @@
 							<a href="<?= $config['hotelUrl'] ?>/logout"><li class="logout"><?= $lang["NsignOut"] ?></li></a>
 						</ul>
 					</div>
-				</nav>																										
+				</nav>	
+				
+				

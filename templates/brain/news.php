@@ -13,6 +13,9 @@
 	}
 </style>
 <div class="center">
+<?php
+		include_once 'includes/alerts.php';
+	?>
 	<div style="margin-left: 0px;" class="columright">
 		<div style = "" class="box">
 			<div class="title">

@@ -62,4 +62,3 @@
 			echo '<b style="color:#046fe0;text-decoration: underline;">No User Found</a><span class="staff-'.$OnlineStatus.'"></b> ';
 		}
 	}
-?>

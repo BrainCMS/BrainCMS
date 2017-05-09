@@ -18,15 +18,31 @@
 								<b>	<strong><tr><td><b>Word</b></td><td><b>To</b></td></strong></b>
 									<tbody>
 										<?php
-											$getArticles = $dbh->prepare("SELECT * FROM wordfilter ORDER BY word DESC");
-											$getArticles->execute();
-											while($news = $getArticles->fetch())
+											if ($config['hotelEmu'] == 'arcturus')
 											{
-												echo'<tr>
-												<td style="width: 13%;">'.$news["word"].'</td>
-												<td style="width: 7%;">'.$news["replacement"].'</td>
-												';
-											}			
+												$getArticles = $dbh->prepare("SELECT * FROM wordfilter");
+												$getArticles->execute();
+												while($news = $getArticles->fetch())
+												{
+													echo'<tr>
+													<td style="width: 13%;">'.$news["key"].'</td>
+													<td style="width: 7%;">'.$news["replacement"].'</td>
+													';
+												}	
+											}
+											else
+											
+											{
+												$getArticles = $dbh->prepare("SELECT * FROM wordfilter");
+												$getArticles->execute();
+												while($news = $getArticles->fetch())
+												{
+													echo'<tr>
+													<td style="width: 13%;">'.$news["word"].'</td>
+													<td style="width: 7%;">'.$news["replacement"].'</td>
+													';
+												}
+											}
 										?>
 									</tbody>
 								</table>
@@ -36,4 +52,4 @@
 					<?php
 						include_once "includes/footer.php";
 						include_once "includes/script.php";
-					?>																			
+					?>																								

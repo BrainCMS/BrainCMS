@@ -60,6 +60,7 @@
 	$lang["Nonline"] = "Conectado";
 	$lang["Nstaff"] = "Staffs";
 	$lang["Nteams"] = "Equipos";
+	$lang["Nsessionlog"] = "Login Log";
 	
 	//Me----------------------------------------------------------------------------------------------
 	$lang["Mgoto"] = "Entrar a ".$config['hotelName']."";
@@ -251,6 +252,9 @@ Aquí tienes a todos los miembros que estén conectados o no.	</P>
 	$lang["Buntil"] = "hasta";
 	$lang["Bwrong"] = "<h4>¿Crees que no está bien?</h4> Contacta con el equipo</b>";
 	
+	//Alerts----------------------------------------------------------------------------------------------
+	$lang['Adiamondsclaim'] = 'You can claim diamonds by the referrer bank.';
+	$lang['AadminMessage'] = 'Message from the administrator: ';
 	
 	//***************************************** Classes languages ****************************************\\
 	

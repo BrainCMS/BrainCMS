@@ -3,10 +3,8 @@ if(!defined('BRAIN_CMS'))
 	{ 
 		die('Sorry but you cannot access this file!'); 
 	}
-	
 	session_start();
 	ob_start();
-	
 	define('Z', $_SERVER['DOCUMENT_ROOT'].'/');
 	define('A', Z . 'system/');
 	define('B', 'app/');
@@ -17,7 +15,6 @@ if(!defined('BRAIN_CMS'))
 	define('I', 'maintenance/');
 	define('J', Z . 'adminpan/');
 	define('K', 'plugins/');
-	
 	require_once A . '/brain-config.php';
 	require_once A . E . '/'.$config['lang'].'.php';
 	require_once A . B . C . '/functions.php';
@@ -26,12 +23,5 @@ if(!defined('BRAIN_CMS'))
 	require_once A . B . C . '/class.html.php';
 	require_once A . B . C . '/class.admin.php';
 	require_once A . B . C . '/class.db.php';
-	
 	define('S', $config['skin']);
-	
 	Html::loadPlugins();
-
-?>
-
-
-

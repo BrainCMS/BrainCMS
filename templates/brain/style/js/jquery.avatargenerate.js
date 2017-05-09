@@ -65,7 +65,7 @@
 
     $( '#clothes' ).setClothes();
     $( '#colors' ).setColors();
-    $( '#avatar-code' ).setCodeReceiver();
+    $( '#avatar' ).setCodeReceiver();
 
 
     /*
