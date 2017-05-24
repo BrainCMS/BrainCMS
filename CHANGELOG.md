@@ -1,5 +1,35 @@
 ### Version ###
-The latest stable vesion of BrainCMS is [v1.7.2][1].
+The latest stable vesion of BrainCMS is [v1.8.0.1][1].
+
+### Core ###
+	None
+
+### Plugins ###
+	None
+
+### Classes ###
+	None
+
+### Templates ###
+	None
+    
+### Configuration ###
+	None
+
+### Admin ###
+	None
+    
+### MySQL ###
+	None
+    
+### Notes ###
+	Added BrainCMS Addons (By RetroRipper)
+    > Password Reset (SMTP): 13-12-2016 11:34:20
+    > By VIP Membership: 11-12-2016 10:11:08
+    GitHub Wiki is here (sample: [How do I change the default home room?][2]).
+    
+### Version ###
+BrainCMS [v1.7.2][1].
 
 ### Core ###
 	None
@@ -64,3 +94,4 @@ BrainCMS v[1.7.0][1]:
 	wordfilter_characters (New Table)
     
 [1]: https://github.com/BrainCMS/BrainCMS/releases
+[2]: https://github.com/BrainCMS/BrainCMS/wiki/How-do-I-change-the-default-home-room

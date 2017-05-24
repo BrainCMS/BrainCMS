@@ -3,8 +3,9 @@
 BrainCMS is a Habbo Retro Content Management System ("CMS) by [RetroRipper][1]. Looking to [demo BrainCMS][2]? You can also play a live working retro [Playlegit.ca][3] running BrainCMS.
 
 ## What's in BrainCMS? ##
-- Choose start room in the brain-config.php file.
-- Staff Pin
+- Choose start room in the [brain-config.php][4] file.
+- Security: Client Pin
+- Security: HK Pin
 - User Home's
 - User of the week
 - Staff page
@@ -23,9 +24,9 @@ BrainCMS is a Habbo Retro Content Management System ("CMS) by [RetroRipper][1]. 
 - Xampp/IIS 
 
 ### Version ###
-The latest stable vesion of BrainCMS is: v1.8.0-STABLE.
+The latest stable vesion of BrainCMS is: v1.8.0.1-STABLE.
 
-### Updated (Plugins) ###
+### Updated Plugins ###
 	newscomment.php      / small bug fix. (Add variable $config on line 8).
     staffapplication.php / small bug fix (change on staffApplication to staffapplication on line 34).
     userhomes.php        / to update the replace it with the new userhomes.php from 1.8.0
@@ -33,6 +34,9 @@ The latest stable vesion of BrainCMS is: v1.8.0-STABLE.
 
 ### New Plugins ###
 	wordfilter.php // Filter plugin use te tabels wordfilter and wordfilter_characters
+
+### Addons ###
+	[Addons (or, add-ins)][5] can be installed manually by following the files inside the download(s).
 
 ### Update Classes ###
 	class.admin.php  / to update the replace it with the new class.admin.php from 1.8.0  // Fix ArcturusEMU for the adminpan // Need to fix Chatlog,Private Messages,Trade logs and Banlist
@@ -85,3 +89,5 @@ The latest stable vesion of BrainCMS is: v1.8.0-STABLE.
 [1]: https://retroripper.com/braincms.php
 [2]: https://brain.retroripper.com
 [3]: https://playlegit.ca/index
+[4]: https://github.com/BrainCMS/BrainCMS/wiki/How-do-I-change-the-default-home-room
+[5]: https://github.com/BrainCMS/BrainCMS/tree/master/brain-addons
