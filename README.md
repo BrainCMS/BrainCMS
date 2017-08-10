@@ -1,12 +1,12 @@
 # BrainCMS #
 
-BrainCMS is a Habbo Retro Content Management System ("CMS) by [RetroRipper][1]. Looking to [demo BrainCMS][2]? You can also play a live working retro [Playlegit.ca][3] running BrainCMS.
+BrainCMS is a [Habbo Retro][6] Content Management System ("CMS") by [RetroRipper][1]. Fancy trying a live demo of BrainCMS? Visit the [BrainCMS Demo][2]! You can also play a live Retro - Visit [https://playlegit.ca][3] running a custom version of BrainCMS.
 
 ## What's in BrainCMS? ##
-- Choose start room in the [brain-config.php][4] file.
-- Security: Client Pin
-- Security: HK Pin
-- User Home's
+- Choose the default "Home Room" via the [brain-config.php][4] file.
+- Security: Client passcode
+- Security: Housekeeping passcode
+- User Profiles
 - User of the week
 - Staff page
 - Team page
@@ -27,7 +27,7 @@ BrainCMS is a Habbo Retro Content Management System ("CMS) by [RetroRipper][1]. 
 The latest stable vesion of BrainCMS is: v1.8.0.1-STABLE.
 
 ### Updated Plugins ###
-	newscomment.php      / small bug fix. (Add variable $config on line 8).
+    newscomment.php      / small bug fix. (Add variable $config on line 8).
     staffapplication.php / small bug fix (change on staffApplication to staffapplication on line 34).
     userhomes.php        / to update the replace it with the new userhomes.php from 1.8.0
     wardrope.php         / add a new variable $emuUse on line 8 and replace user_wardrobe with ".$emuUse['user_wardrobe']."
@@ -91,3 +91,4 @@ The latest stable vesion of BrainCMS is: v1.8.0.1-STABLE.
 [3]: https://playlegit.ca/index
 [4]: https://github.com/BrainCMS/BrainCMS/wiki/How-do-I-change-the-default-home-room
 [5]: https://github.com/BrainCMS/BrainCMS/tree/master/brain-addons
+[6]: https://help.habbo.com/hc/en-us/articles/221642388-What-are-Retro-sites-
