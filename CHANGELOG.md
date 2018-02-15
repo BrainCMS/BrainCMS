@@ -1,5 +1,66 @@
 ### Version ###
-The latest stable vesion of BrainCMS is [v1.8.0.1][1].
+The latest stable vesion of BrainCMS is [v1.8.1-s][1]. Fixed 3 cross-site scripting (XSS) exploits Merijn (retronet).
+
+### Core ###
+	None.
+
+### Plugins ###
+	None.
+
+### Classes ###
+	/system/app/classes/functions.php - update.md
+
+### Templates ###
+	/template/index.php - Restore CSS/jQuery animations (line 24).
+    
+### Configuration ###
+	/system/brain-config.sample.php - Less-confusing configuration file. (simply delete brain.config.php and rename brain.config.sample.php to brain.config.php to use)
+
+### Admin ###
+	/adminpan/chatlogs.php // Edit line 30 add function filter.
+	/adminpan/chatlogs_console.php // Edit line 29 add function filter.
+	/adminpan/rooms.php // Edit line 29 and line 46 add function filter.
+   
+### MySQL ###
+	None.
+    
+### Notes ###
+	None.
+
+
+### Version ###
+BrainCMS is [v1.8.0.1][1].
+
+### Core ###
+	None
+
+### Plugins ###
+	None
+
+### Classes ###
+	None
+
+### Templates ###
+	None
+    
+### Configuration ###
+	None
+
+### Admin ###
+	None
+    
+### MySQL ###
+	None
+    
+### Notes ###
+	Added BrainCMS Addons (By RetroRipper)
+    > Password Reset (SMTP): 13-12-2016 11:34:20
+    > By VIP Membership: 11-12-2016 10:11:08
+    GitHub Wiki is here (sample: [How do I change the default home room?][2]).
+	
+	
+### Version ###
+BrainCMS is [v1.8.0.1][1].
 
 ### Core ###
 	None

@@ -1,9 +1,10 @@
 <?php
+
 	if(!defined('BRAIN_CMS')) 
 	{ 
 		die('Sorry but you cannot access this file!'); 
 	}
-	function wordFilter($message)
+	function wordFilter2($id)
 	{
 		global $dbh,$config;
 		if ($config['newsCommandFilter'] == true)

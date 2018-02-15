@@ -19,8 +19,9 @@
 		<body>
             <div id="site">
 				<div id="body">
-					<link rel="stylesheet" href="/templates/brain/style/css/index/style.css?v=17">
-					<link rel="stylesheet" href="/templates/brain/style/css/index/StyleIndex.css?v=4">
+					<link rel="stylesheet" href="/templates/brain/style/css/index/style.css?v=15022018">
+					<link rel="stylesheet" href="/templates/brain/style/css/index/StyleIndex.css?v=15022018">
+					<link rel="stylesheet" href="/templates/brain/style/css/index/animate.css?v=15022018">
 					<style type="text/css">
 						@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,300);
 						@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
@@ -116,5 +117,8 @@
 							</div>
 						</div>
 					</div>
+					
+					<!-- Placed at the end of the document so the pages load faster -->
+					<script src="/templates/brain/style/js/jquery.min.js"></script>
 				</body>
 			</html>			

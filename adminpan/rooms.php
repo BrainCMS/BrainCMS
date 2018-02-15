@@ -27,7 +27,7 @@
 													echo'';
 													echo'<tr>
 													<td>'.$news["id"].'</td>
-													<td style="width: 13%;">'.$news["name"].'</td>
+													<td style="width: 13%;">'.filter($news["name"]).'</td>
 													<td>'.$news["id"].'</td>
 													<td style="width: 25%;">'.$news["state"].'</td>
 													<td>'.$news["model"].'</td>
@@ -43,7 +43,7 @@
 													echo'';
 													echo'<tr>
 													<td>'.$news["id"].'</td>
-													<td style="width: 13%;">'.$news["caption"].'</td>
+													<td style="width: 13%;">'.filter($news["caption"]).'</td>
 													<td>'.$news["id"].'</td>
 													<td style="width: 25%;">'.$news["state"].'</td>
 													<td>'.$news["model_name"].'</td>

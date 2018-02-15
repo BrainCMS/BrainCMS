@@ -15,7 +15,7 @@
 	$config['hotelEmu'] = 'plusemu'; // plusemu // arcturus
 
 	/* Client Setting */
-	$hotel['emuHost'] = "91.134.247.208"; //IP of VPS//IP of Proxy
+	$hotel['emuHost'] = "127.0.0.1"; //IP of VPS//IP of Proxy
 	$hotel['emuPort'] = "30000";  //Port of VPS//Port of Proxy
 	$hotel['staffCheckClient'] = false; //Enable the staff pin in the client (true) or disable it (false)
 	$hotel['staffCheckClientMinimumRank'] = 3; //Minium staff rank to get the staff pin in the client
@@ -50,7 +50,7 @@
 	$config['newsCommandFilter'] = true; //Enable wordfilter on news commands (the filter use the db tabels wordfilter and wordfilter_characters)
 	$config['alertReferrer'] = true;
 	$config['alert'] = 'BrainCMS Beta'; //Alert message. If you don't want a alert, you fill in 'nomessage' or you do leave it blank.
-	$config['brainversion'] = '1.8.0'; // Please do not change.
+	$config['brainversion'] = '1.8.1'; // Please do not change.
 	
 	/* Facebook Login Settings
 		You need a Facebook app for this to work go to

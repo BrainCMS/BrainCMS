@@ -274,7 +274,7 @@
 							'.filter(gmdate("d-m-y", $getMessageData["date"])).'
 							</div>
 							<div style="    width: 68%;"class="newscolumnmessage">
-							'.wordFilter($getMessageData["message"]).'
+							'.wordFilter2($getMessageData["message"]).'
 							</div>
 							</div>';
 						}

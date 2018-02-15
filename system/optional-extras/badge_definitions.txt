@@ -1,0 +1,32 @@
+PHP:
+define('DATABASENAME', 'habbo'); // change this to your database name
+
+$get = glob('c_images/album1584/*.{gif,GIF}', GLOB_BRACE);
+foreach($get as $badge){
+    if(is_file($badge)){
+        echo "INSERT INTO `".DATABASENAME."`.`badge_definitions` (`code`, `required_right`) VALUES ('".basename($badge, '.gif')."', '');";
+        echo '<br />';
+    }
+}
+CREDIT: Geo
+   URL: http://forum.ragezone.com/f353/little-badge-script-plusemu-1102190
+
+
+PHP:
+<?php 
+$target = "c_images/album1584/"; 
+$weeds = array('.', '..'); 
+$directories = array_diff(scandir($target), $weeds);   
+foreach($directories as $value) 
+{ 
+$gifkill=str_replace('.gif', '', $value); 
+$gif2kill=str_replace('.GIF', '', $gifkill); 
+$uppercasewords=ucwords($gif2kill); 
+if(is_file($target.$value)) 
+{ 
+echo "INSERT INTO `DATABASENAME`.`badge_definitions` (`code`, `required_right`) VALUES ('".$uppercasewords."', '');<br />"; 
+} 
+} 
+?>
+CREDIT: </Meap>
+   URL: http://forum.ragezone.com/f353/little-badge-script-plusemu-1102190

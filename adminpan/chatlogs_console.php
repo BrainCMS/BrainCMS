@@ -26,7 +26,7 @@
 										<td>'.$news["id"].'</td>
 										<td style="width: 13%;">'.$news["from_id"].'</td>
 										<td style="width: 7%;">'.$news["to_id"].'</td>
-										<td style="width: 25%;">'.$news["message"].'</td>
+										<td style="width: 25%;">'.filter($news["message"]).'</td>
 										<td>'. gmdate('d-m-Y, H:i ', $news['timestamp']).'</td>
 										';
 									}

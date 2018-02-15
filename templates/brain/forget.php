@@ -26,7 +26,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title><?= $config['hotelName'] ?> | Requesting password reset</title>
-		<link href="https://bootswatch.com/paper/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="https://bootswatch.com/3/paper/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="/templates/brain/style/css/register.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300normal,300italic,400normal,400italic,600normal,600italic,700normal,700italic,800normal,800italic&amp;subset=all" rel="stylesheet" type="text/css">

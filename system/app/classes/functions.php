@@ -28,8 +28,8 @@
 	function checkVersion()
 	{
 		global $config;
-		$script = file_get_contents("http://brain.retroripper.com/version.txt");
-		$update = file_get_contents("http://brain.retroripper.com/update.txt");
+		$script = file_get_contents("http://brain.retroripper.com/version.php");
+		$update = file_get_contents("https://raw.githubusercontent.com/BrainCMS/BrainCMS/master/adminpan/update.md");
 		$version = $config['brainversion'];
 		if($version == $script) {
 			echo'<div style = "width: 100%;
