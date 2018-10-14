@@ -46,7 +46,7 @@
 					<textarea name="serious" size="400" rows="5" cols="50" style="width: 100%;"> </textarea></p>
 					<p><label><b><?= $lang["Nimprovehotel"] ?></b><br>
 					<textarea name="improve" size="400" rows="5" cols="50" style="width: 100%;"> </textarea></p>
-					</p><label><b><?= $lang["Nmicrophone"] ?></b><br>
+					<p><label><b><?= $lang["Nmicrophone"] ?></b><br>
 					<select style="width: 100%;" name="microphone" class="form-control">
 						<option name="microphone" value="1"><?= $lang["Nyes"] ?></option>
 						<option name="microphone" value="2"><?= $lang["Nnoe"] ?></option>
