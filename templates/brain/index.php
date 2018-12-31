@@ -14,9 +14,7 @@
 		<!DOCTYPE>
 		<html lang="en">
 			<script type="text/javascript">function siteUrl() {return "";}function showReg() {window.location = siteUrl() + "register";}  function fblogin() {window.location = siteUrl() + "/system/app/plugins/fblogin/fbconfig.php";}</script>
-		
-	</head>
-		<body>
+	
             <div id="site">
 				<div id="body">
 					<link rel="stylesheet" href="/templates/brain/style/css/index/style.css?v=15022018">
