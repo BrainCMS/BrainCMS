@@ -102,6 +102,6 @@
 							<a href="<?= $config['hotelUrl'] ?>/logout"><li class="logout"><?= $lang["NsignOut"] ?></li></a>
 						</ul>
 					</div>
-				</nav>	
+				</div>	
 				
 				
