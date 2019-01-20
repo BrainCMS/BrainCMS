@@ -1,12 +1,10 @@
-
-
 <html>
 	<head>
 		<meta name="robots" content="index,follow,all"/>
 		<meta name="description" content="Maak vrienden, doe mee en val op!"/>
 		<meta name="keywords" content="<?= $config['hotelName'] ?>, <?= $config['hotelName'] ?>hotel, <?= $config['hotelName'] ?> hotel, virtueel, wereld, sociaal netwerk, gratis, community, avatar, chat, online, tiener, roleplaying, doe mee, sociaal, groepen, forums, veilig, speel, games, online, vrienden, tieners, zeldzaams, zeldzame meubi, verzamelen, maak, verzamel, kom in contact, meubi, meubeks, huisdieren, kamer inrichten, delen, uitdrukking, badges, hangout, muziek, beroemdheid, VIP-visits, celebs, mmo, mmorpgs, massive multiplayer"/>
 		<meta name="build" content="AuroraCMS - RELEASE-02082016"/>
-		<title><?= $config['hotelName'] ?> Hotel: Beleef het plezier!</title>
+		<title><?= $config['hotelName'] ?> Hotel: Join in the fun!</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
@@ -14,9 +12,6 @@
 		<!DOCTYPE>
 		<html lang="en">
 			<script type="text/javascript">function siteUrl() {return "";}function showReg() {window.location = siteUrl() + "register";}  function fblogin() {window.location = siteUrl() + "/system/app/plugins/fblogin/fbconfig.php";}</script>
-		
-	</head>
-		<body>
             <div id="site">
 				<div id="body">
 					<link rel="stylesheet" href="/templates/brain/style/css/index/style.css?v=15022018">

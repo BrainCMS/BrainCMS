@@ -35,7 +35,7 @@
 	<body>
 		<header id="mainheader">
 			<div class="center">
-				<a href="#">
+				<a href="/">
 					<div class="head_enter">
 						<a href="/client" onclick="window.open('/client','new','toolbar=0,scrollbars=0,location=1,statusbar=1,menubar=0,resizable=1,width=1270,height=700');return false;" class="btn btn-success"><?= $lang["Hgoto"] ?></a> 
 						<a onclick="<?= $config['hotelUrl'] ?>/logout" href="<?= $config['hotelUrl'] ?>/logout" class="btn btn-danger"><?= $lang["HsignOut"] ?></a>
@@ -43,6 +43,7 @@
 					<div class="wrap">
 						<div class="logo">
 						</div>
+					</div>
 					</a>
 					<div id="onlinecount"><small><b><?= Game::usersOnline() ?></b> <?= $config['hotelName'] ?>'s online.</small></div>
 					<?php
@@ -102,6 +103,7 @@
 							<a href="<?= $config['hotelUrl'] ?>/logout"><li class="logout"><?= $lang["NsignOut"] ?></li></a>
 						</ul>
 					</div>
-				</nav>	
+				</div>
+			</nav>	
 				
 				
