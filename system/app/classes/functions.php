@@ -28,7 +28,7 @@
 	function checkVersion()
 	{
 		global $config;
-		$script = file_get_contents("http://brain.retroripper.com/version.php");
+		$script = file_get_contents("https://braincms.github.io/version.txt");
 		$update = file_get_contents("https://raw.githubusercontent.com/BrainCMS/BrainCMS/master/adminpan/update.md");
 		$version = $config['brainversion'];
 		if($version == $script) {
