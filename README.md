@@ -1,5 +1,4 @@
 # D'oh! #
-<<<<<<< HEAD
 * Unfortunately, I'm unable be able to continue keeping this GitHub repository up-to-date, due to lack of time. You can always download the latest version of [BrainCMS][1] from the folks at RetroRipper.
 
 # BrainCMS #
@@ -8,17 +7,12 @@ BrainCMS is a [Habbo Retro][6] Content Management System ("CMS") from the folks 
 
 Looking for a live demo of BrainCMS? Visit the [BrainCMS Demo][2] website (Offline as of January 2019).
 
-=======
-
-* Unfortunately, I'm unable be able to continue keeping this GitHub repository up-to-date, due to lack of time. You can always download the latest version of [BrainCMS][1] from the folks at RetroRipper.
-
 # BrainCMS #
 
 BrainCMS is a [Habbo Retro][6] Content Management System ("CMS") from the folks at [RetroRipper][1].
 
 Looking for a live demo of BrainCMS? Visit the [BrainCMS Demo][2] website.
 
->>>>>>> origin/master
 ## Version ##
 The latest stable vesion of BrainCMS is v1.8.1-STABLE* see the [CHANGELOG.md][3] file.
 
@@ -47,18 +41,12 @@ The latest stable vesion of BrainCMS is v1.8.1-STABLE* see the [CHANGELOG.md][3]
 <<<<<<< HEAD
 - We :heart: third-party addons! Say hello to Smileys (@higoka).
 - We provide some [free resources][11] to kick-start your hotel, no more searching Google.
-=======
-- We <3 third-party addons #Smileys (higoka).
->>>>>>> origin/master
+
 
 ## BrainCMS Requirements ##
 - PHP 5.6+
 - Mysqli
-<<<<<<< HEAD
 - XAMPP / IIS
-=======
-- Xampp/IIS
->>>>>>> origin/master
 
 
 [1]: https://habbo.retroripper.com/braincms
@@ -71,7 +59,4 @@ The latest stable vesion of BrainCMS is v1.8.1-STABLE* see the [CHANGELOG.md][3]
 [8]: https://github.com/BrainCMS/BrainCMS/tree/master/brain-addons
 [9]: https://github.com/BrainCMS/BrainCMS/blob/master/system/brain-config.sample.php
 [10]: https://github.com/BrainCMS/BrainCMS/commits/master
-<<<<<<< HEAD
 [11]: https://github.com/BrainCMS/BrainCMS/blob/master/RESOURCES.md
-=======
->>>>>>> origin/master
