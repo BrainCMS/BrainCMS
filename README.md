@@ -7,12 +7,6 @@ BrainCMS is a [Habbo Retro][6] Content Management System ("CMS") from the folks 
 
 Looking for a live demo of BrainCMS? Visit the [BrainCMS Demo][2] website (Offline as of January 2019).
 
-# BrainCMS #
-
-BrainCMS is a [Habbo Retro][6] Content Management System ("CMS") from the folks at [RetroRipper][1].
-
-Looking for a live demo of BrainCMS? Visit the [BrainCMS Demo][2] website.
-
 ## Version ##
 The latest stable vesion of BrainCMS is v1.8.1-STABLE* see the [CHANGELOG.md][3] file.
 
