@@ -1,5 +1,10 @@
 # D'oh! #
-* Unfortunately, I'm unable be able to continue keeping this GitHub repository up-to-date, due to lack of time. You can always download the latest version of [BrainCMS][1] from the folks at RetroRipper.
+
+| :warning: Unfortunately, I'm unable be able to continue keeping this GitHub repository up-to-date, due to lack of time. You can always download the latest version of [BrainCMS][1] from the folks at RetroRipper. |
+| --- |
+
+| :information_source: We recommend switching to [Cosmic][12] ([Demo][13]) which is updated frequently and has ton more features (web shop, marketplace, housekeeping etc) and more secure than BrainCMS. |
+| --- |
 
 # BrainCMS #
 
@@ -43,8 +48,8 @@ The latest stable vesion of BrainCMS is v1.8.1-STABLE* see the [CHANGELOG.md][3]
 - XAMPP / IIS
 
 
-[1]: https://habbo.retroripper.com/braincms
-[2]: https://brain.retroripper.com
+[1]: https://retroripper.com/#braincms
+[2]: https://retroripper.com#braincms
 [3]: https://github.com/BrainCMS/BrainCMS/blob/master/CHANGELOG.md
 [4]: https://github.com/BrainCMS/BrainCMS/wiki/How-do-I-change-the-default-home-room
 [5]: https://github.com/BrainCMS/BrainCMS/tree/master/brain-addons
@@ -54,3 +59,5 @@ The latest stable vesion of BrainCMS is v1.8.1-STABLE* see the [CHANGELOG.md][3]
 [9]: https://github.com/BrainCMS/BrainCMS/blob/master/system/brain-config.sample.php
 [10]: https://github.com/BrainCMS/BrainCMS/commits/master
 [11]: https://github.com/BrainCMS/BrainCMS/blob/master/RESOURCES.md
+[12]: https://github.com/devraizer/Cosmic
+[13]: https://www.cosmicproject.online
