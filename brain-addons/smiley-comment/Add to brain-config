@@ -1,0 +1,28 @@
+/**
+ * Smiley Comment
+ */
+$config['smileys'] = [
+    /**
+     * Enable / disable the smileys
+     */
+    'enabled' => true,
+
+    /**
+     * Directory where the smileys are stored.
+     */
+    'directory' => '/templates/brain/style/images/smileys',
+
+    /**
+     * Add your own replacements
+     */
+    'replacements' => [
+        ':)'     => 'smiling.svg',
+        ':('     => 'sad.svg',
+        ';)'     => 'wink.svg',
+        ':P'     => 'tongue-out-1.svg',
+        ':D'     => 'happy-1.svg',
+        ':\'('   => 'unhappy.svg',
+        '&gt;:(' => 'angry.svg',
+        ':*'     => 'kissing.svg',
+    ],
+];
